@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" property='og:title' />
+    <meta content="" property='og:url' />
+    <meta content="" property='og:description' />
+    <meta content="" property='og:image' />
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <div class="logo_area vt_mid">
+                <a href="index.html" class="logo"></a>
+            </div>
+            <div class="nav_area vt_mid">
+                <nav class="nav">
+                    <a href="home.html" class="nav_a">메뉴1</a>
+                    <a href="restaurant.html" class="nav_a">메뉴2</a>
+                    <a href="estate.html" class="nav_a">메뉴3</a>
+                    <a href="deal.html" class="nav_a">메뉴4</a>
+                    <a href="community.html" class="nav_a">메뉴5</a>
+                </nav>
+            </div>
+            <div class="mem_area">
+                <a href="" class="mem_a">로그인</a>
+                <a href="" class="mem_a">회원가입</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="write_food" class="page">
+
+        <div class="inner">
+            <h1 class="my_h1">맛집 추가하기</h1>
+
+            <form name="new_food">
+
+            <article class="form_disp">
+                <div class="f_block">
+                    <label for="store_name" class="f_lab">가게 이름</label>
+                    <div class="i_wrap">
+                        <input type="text" name="store_name" id="store_name" placeholder="가게 이름을 입력해주세요." class="input">
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label for="store_detail" class="f_lab">가게 설명</label>
+                    <div class="i_wrap">
+                        <textarea name="store_detail" id="store_detail" placeholder="가게 설명을 입력해주세요." class="textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label class="f_lab">
+                        메뉴
+
+                        <button type="button" class="add_btn">메뉴 추가하기</button>
+                    </label>
+                    <div class="i_wrap">
+                        <div class="mymenu_wrap">
+                            <div class="menu vt_top">
+                                <input type="file" name="menu1" id="menu1" class="file menu_th" onchange="read_menu(this)">
+                                <label for="menu1" class="img_area">
+                                    <div class="grid">
+                                        <span class="no_txt t1 on">NO IMG</span>
+                                        <img src="" alt="img" id="thumb1">
+                                    </div>
+                                </label>
+                                <div class="txt_area">
+                                    <input type="text" name="name1" id="name1" class="input" placeholder="메뉴 이름">
+                                </div>
+
+                                <button type="button" class="del_btn">
+                                    <img src="img/delete.png" alt="삭제">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label class="f_lab">로고 이미지</label>
+                    <div class="i_wrap">
+                        <div class="logo_wrap">
+                            <input type="file" name="mylogo" id="mylogo" class="file" onchange="read_logo(this)">
+                            <label for="mylogo" class="circle">
+                                <div class="grid">
+                                    <img src="img/logo_empty.png" id="logo_thumb" alt="no logo">
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label class="f_lab">대표 이미지</label>
+                    <div class="i_wrap">
+                        <div class="img_wrap">
+                            <input type="file" name="myimg" id="myimg" class="file" onchange="read_myimg(this)">
+                            <label for="myimg" class="back">
+                                <div class="grid">
+                                    <img src="img/img_empty.png" id="thumb" alt="no image" class="empty">
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label class="f_lab">추가 정보</label>
+                    <div class="i_wrap">
+                        <div class="sb_block">
+                            <label for="location_1" class="sb_lab vt_top">위치</label>
+                            <div class="sb_opt vt_top">
+                                <select name="location_1" id="location_1" class="select on">
+                                    <option value="default">선택</option>
+                                    <option value="loc1_1">부평구</option>
+                                    <option value="loc1_2">남동구</option>
+                                    <option value="loc1_3">연수구</option>
+                                </select>
+                                <select name="location_2" id="location_2" class="select opt1">
+                                    <option value="default">선택</option>
+                                    <option value="loc2_1">부평로</option>
+                                </select>
+                                <select name="location_2" id="location_2" class="select opt2">
+                                    <option value="default">선택</option>
+                                    <option value="loc2_1">구월로</option>
+                                </select>
+                                <select name="location_2" id="location_2" class="select opt3">
+                                    <option value="default">선택</option>
+                                    <option value="loc2_1">연수로</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="sb_block">
+                            <label class="sb_lab vt_top">영업시간</label>
+                            <div class="sb_opt vt_top">
+                                <div class="day_wrap">
+                                    <div class="ck_wrap vt_mid">
+                                        <input type="checkbox" name="day" id="mon" class="ckbox">
+                                        <label for="mon" class="day_lab">월</label>
+                                    </div>
+                                    <div class="time_wrap vt_mid">
+                                        <input type="time" name="mon_start" id="mon_start" class="time" disabled>
+                                        <span class="gap vt_mid">~</span>
+                                        <input type="time" name="mon_end" id="mon_end" class="time" disabled>
+                                    </div>
+                                </div>
+                                <div class="day_wrap">
+                                    <div class="ck_wrap vt_mid">
+                                        <input type="checkbox" name="day" id="tue" class="ckbox">
+                                        <label for="tue" class="day_lab">화</label>
+                                    </div>
+                                    <div class="time_wrap vt_mid">
+                                        <input type="time" name="tue_start" id="tue_start" class="time" disabled>
+                                        <span class="gap vt_mid">~</span>
+                                        <input type="time" name="tue_end" id="tue_end" class="time" disabled>
+                                    </div>
+                                </div>
+
+                                <div class="day_wrap">
+                                    <div class="ck_wrap vt_mid">
+                                        <input type="checkbox" name="day" id="wed" class="ckbox">
+                                        <label for="wed" class="day_lab">수</label>
+                                    </div>
+                                    <div class="time_wrap vt_mid">
+                                        <input type="time" name="wed_start" id="wed_start" class="time" disabled>
+                                        <span class="gap vt_mid">~</span>
+                                        <input type="time" name="wed_end" id="wed_end" class="time" disabled>
+                                    </div>
+                                </div>
+
+                                <div class="day_wrap">
+                                    <div class="ck_wrap vt_mid">
+                                        <input type="checkbox" name="day" id="thu" class="ckbox">
+                                        <label for="thu" class="day_lab">목</label>
+                                    </div>
+                                    <div class="time_wrap vt_mid">
+                                        <input type="time" name="thu_start" id="thu_start" class="time" disabled>
+                                        <span class="gap vt_mid">~</span>
+                                        <input type="time" name="thu_end" id="thu_end" class="time" disabled>
+                                    </div>
+                                </div>
+                                <div class="day_wrap">
+                                    <div class="ck_wrap vt_mid">
+                                        <input type="checkbox" name="day" id="fri" class="ckbox">
+                                        <label for="fri" class="day_lab">금</label>
+                                    </div>
+                                    <div class="time_wrap vt_mid">
+                                        <input type="time" name="fri_start" id="fri_start" class="time" disabled>
+                                        <span class="gap vt_mid">~</span>
+                                        <input type="time" name="fri_end" id="fri_end" class="time" disabled>
+                                    </div>
+                                </div>
+                                <div class="day_wrap">
+                                    <div class="ck_wrap vt_mid">
+                                        <input type="checkbox" name="day" id="sat" class="ckbox">
+                                        <label for="sat" class="day_lab">토</label>
+                                    </div>
+                                    <div class="time_wrap vt_mid">
+                                        <input type="time" name="sat_start" id="sat_start" class="time" disabled>
+                                        <span class="gap vt_mid">~</span>
+                                        <input type="time" name="sat_end" id="sat_end" class="time" disabled>
+                                    </div>
+                                </div>
+                                <div class="day_wrap">
+                                    <div class="ck_wrap vt_mid">
+                                        <input type="checkbox" name="day" id="sun" class="ckbox">
+                                        <label for="sun" class="day_lab">일</label>
+                                    </div>
+                                    <div class="time_wrap vt_mid">
+                                        <input type="time" name="sun_start" id="sun_start" class="time" disabled>
+                                        <span class="gap vt_mid">~</span>
+                                        <input type="time" name="sun_end" id="sun_end" class="time" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sb_block">
+                            <label for="store_num" class="sb_lab vt_top">매장 연락처</label>
+                            <div class="sb_opt vt_top">
+                                <input type="number" name="store_num" id="store_num" class="input" placeholder="번호만 입력해주세요">
+                            </div>
+                        </div>
+                        <div class="sb_block">
+                            <label for="mysite" class="sb_lab vt_top">웹사이트</label>
+                            <div class="sb_opt vt_top">
+                                <input type="text" name="mysite" id="mysite" class="input" placeholder="사이트 주소를 입력해주세요">
+                            </div>
+                        </div>
+                        <div class="sb_block">
+                            <label for="chat" class="sb_lab vt_top">채팅</label>
+                            <div class="sb_opt vt_top">
+                                <input type="checkbox" name="chat" id="chat" class="toggle">
+                                <span class="txt vt_mid">OFF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <div class="f_btn_area">
+                <button type="submit" class="submit_btn">등록하기</button>
+            </div>
+
+            </form>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="inner">
+            <div class="logo_area vt_top">
+                <a href="index.html" class="logo"></a>
+            </div>
+            <div class="info_area vt_top">
+                <div class="info_line">
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                </div>
+                <div class="info_line">
+                    <div class="i_wrap">푸터 : 정보</div>
+                </div>
+            </div>
+            <div class="term_area vt_top">
+                <a href="" class="term_a">이용약관</a>
+                <a href="" class="term_a">개인정보처리방침</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

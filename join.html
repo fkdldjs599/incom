@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" property='og:title' />
+    <meta content="" property='og:url' />
+    <meta content="" property='og:description' />
+    <meta content="" property='og:image' />
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <button type="button" class="ham_btn">
+                <img src="img/ham.png" alt="메뉴">
+            </button>
+
+            <div class="logo_area vt_mid">
+                <a href="index.html" class="logo"></a>
+            </div>
+
+            <div class="mob_nav on vt_mid">
+
+                <div class="black_bg"></div>
+
+                <div class="white_bg">
+                    <div class="rel">
+                        <div class="close_area">
+                            <button type="button" class="close_btn">
+                                <img src="img/close_btn.png" alt="닫기">
+                            </button>
+                        </div>
+
+                        <div class="name">MENU</div>
+
+                        <div class="nav_area vt_mid">
+                            <nav class="nav">
+                                <a href="home.html" class="nav_a">메인</a>
+                                <a href="restaurant.html" class="nav_a">맛집</a>
+                                <a href="estate.html" class="nav_a">부동산</a>
+                                <a href="news.html" class="nav_a">뉴스</a>
+                                <a href="mypage.html" class="nav_a">마이페이지</a>
+                            </nav>
+                        </div>
+
+                        <div class="mem_area vt_mid">
+                            <a href="" class="mem_a">로그인</a>
+                            <a href="" class="mem_a">회원가입</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="join" class="page">
+        <article class="contents">
+            <div class="inner">
+                <section class="white_box">
+                    <h1 class="j_h1">회원가입</h1>
+
+                    <div class="step_wrap">
+                        <div class="step st1 on">약관 동의</div>
+                        <i class="bar"></i>
+                        <div class="step st2">정보입력</div>
+                    </div>
+
+                    <form name="join">
+                        <div class="f_tab ft1 on">
+                            <div class="all_area">
+                                <div class="ck_area">
+                                    <input type="checkbox" name="all_ck" id="all_ck" class="ckbox">
+                                </div>
+                                <div class="lab_area">
+                                    <label for="all_ck" class="a_lab">이용약관, 개인정보 수집 및 이용에 모두 동의합니다.</label>
+                                </div>
+                            </div>
+
+                            <div class="term_area">
+                                <div class="term">
+                                    <input type="checkbox" name="term" id="term1" class="ckbox">
+                                    <label for="term1" class="t_lab"><span class="red">[필수]</span> 서비스 이용약관에 동의합니다.</label>
+                                    <a href="term1.html" class="more_a">자세히보기</a>
+                                </div>
+                                <div class="term">
+                                    <input type="checkbox" name="term" id="term2" class="ckbox">
+                                    <label for="term2" class="t_lab"><span class="red">[필수]</span> 개인정보 수집 및 이용에 동의합니다.</label>
+                                    <a href="term2.html" class="more_a">자세히보기</a>
+                                </div>
+                            </div>
+
+                            <div class="btn_area">
+                                <button type="button" class="f_btns btn1">취소</button>
+                                <button type="button" class="f_btns btn2">다음</button>
+                            </div>
+                        </div>
+
+                        <div class="f_tab ft2">
+
+                            <div class="ft_block">
+                                <h2 class="j_h2">회원정보 입력 <span class="red">[필수]</span></h2>
+
+                                <div class="input_con">
+                                    <div class="line">
+                                        <label for="user_id" class="ft_lab">아이디</label>
+                                        <div class="i_wrap">
+                                            <input type="text" name="user_id" id="user_id" class="input" placeholder="아이디를 입력해주세요." required>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <label for="user_pw" class="ft_lab">비밀번호</label>
+                                        <div class="i_wrap">
+                                            <input type="password" name="user_pw" id="user_pw" class="input" placeholder="비밀번호를 입력해주세요." required>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <label for="user_pw2" class="ft_lab">비밀번호확인</label>
+                                        <div class="i_wrap">
+                                            <input type="password" name="user_pw2" id="user_pw2" class="input" placeholder="비밀번호를 다시 한번 입력해주세요." required>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <label for="user_name" class="ft_lab">이름</label>
+                                        <div class="i_wrap">
+                                            <input type="text" name="user_name" id="user_name" class="input" placeholder="이름을 입력해주세요." required>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <label for="user_phone" class="ft_lab">연락처</label>
+                                        <div class="i_wrap">
+                                            <input type="number" name="user_phone" id="user_phone" class="input" placeholder="연락처를 숫자만 입력해주세요."required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ft_block">
+                                <h2 class="j_h2">회원정보 입력 [선택]</h2>
+
+                                <div class="input_con">
+                                    <div class="line">
+                                        <label for="user_email" class="ft_lab">이메일</label>
+                                        <div class="i_wrap">
+                                            <input type="email" name="user_email" id="user_email" class="input" placeholder="이메일을 입력해주세요.">
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <label for="user_adr" class="ft_lab">주소</label>
+                                        <div class="i_wrap">
+                                            <input type="text" name="user_adr" id="user_adr" class="input" placeholder="주소를 입력해주세요.">
+                                            <input type="text" name="user_adr2" id="user_adr2" class="input" placeholder="상세주소를 입력해주세요.">
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <label class="ft_lab">수신동의</label>
+                                        <div class="i_wrap">
+                                            <div class="r_wrap">
+                                                <div class="r_box">
+                                                    <input type="checkbox" name="accept" id="ac_mobile" class="ck_v">
+                                                    <label for="ac_mobile" class="ac_lab">모바일</label>
+                                                </div>
+                                                <div class="r_box">
+                                                    <input type="checkbox" name="accept" id="ac_email" class="ck_v">
+                                                    <label for="ac_email" class="ac_lab">이메일</label>
+                                                </div>
+                                                <div class="r_box">
+                                                    <input type="checkbox" name="accept" id="ac_post" class="ck_v">
+                                                    <label for="ac_post" class="ac_lab">우편</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn_area">
+                                <button type="button" class="f_btns btn3">취소</button>
+                                <button type="button" class="f_btns btn4">회원가입</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </article>
+    </section>
+
+    <footer class="footer">
+        <div class="inner">
+            <div class="logo_area vt_top">
+                <a href="index.html" class="logo"></a>
+            </div>
+            <div class="info_area vt_top">
+                <div class="info_line">
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                </div>
+                <div class="info_line">
+                    <div class="i_wrap">푸터 : 정보</div>
+                </div>
+            </div>
+            <div class="term_area vt_top">
+                <a href="" class="term_a">이용약관</a>
+                <a href="" class="term_a">개인정보처리방침</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

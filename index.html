@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" property='og:title' />
+    <meta content="" property='og:url' />
+    <meta content="" property='og:description' />
+    <meta content="" property='og:image' />
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<style>
+    .header {background: transparent; position: fixed;}
+    .header .nav_area .nav_a {color: #fff;}
+    .header .mem_area .mem_a {color: #fff;}
+
+    .header.fixed {background: #fff;}
+    .header.fixed .nav_area .nav_a {color: #191919;}
+    .header.fixed .mem_area .mem_a {color: #191919;}
+
+    .footer.fixed {position: inherit;}
+</style>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <button type="button" class="ham_btn">
+                <img src="img/ham.png" alt="메뉴">
+            </button>
+
+            <div class="logo_area vt_mid">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="INCOM">
+                </a>
+            </div>
+
+            <div class="mob_nav on vt_mid">
+
+                <div class="black_bg"></div>
+
+                <div class="white_bg">
+                    <div class="rel">
+                        <div class="close_area">
+                            <button type="button" class="close_btn">
+                                <img src="img/close_btn.png" alt="닫기">
+                            </button>
+                        </div>
+
+                        <div class="name">MENU</div>
+
+                        <div class="nav_area vt_mid">
+                            <nav class="nav">
+                                <a href="restaurant.html" class="nav_a">맛집</a>
+                                <a href="play.html" class="nav_a">놀거리</a>
+                                <a href="estate.html" class="nav_a">부동산</a>
+                                <a href="news.html" class="nav_a">뉴스</a>
+                                <a href="mypage.html" class="nav_a">마이페이지</a>
+                            </nav>
+                        </div>
+
+                        <div class="mem_area vt_mid">
+                            <a href="login.html" class="mem_a">로그인</a>
+                            <a href="join.html" class="mem_a">회원가입</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="index" class="index">
+        <article class="contents main">
+            <div class="inner">
+                <div class="word_wrap w1">
+                    <span class="word dr1_1">W</span>
+                    <span class="word dr1_2">E</span>
+                    <span class="word dr1_3">L</span>
+                    <span class="word dr1_4">C</span>
+                    <span class="word dr1_5">O</span>
+                    <span class="word dr1_6">M</span>
+                    <span class="word dr1_7">E</span>&nbsp;&nbsp;&nbsp;
+                    <span class="word dr1_8">T</span>
+                    <span class="word dr1_9">O</span>
+                </div>
+                <div class="word_wrap w2">
+                    <span class="word dr2_1 fs70">I</span>
+                    <span class="word dr2_2 fs70">N</span>
+                    <span class="word dr2_3 fs70">C</span>
+                    <span class="word dr2_4 fs70">O</span>
+                    <span class="word dr2_5 fs70">M</span>
+                </div>
+            </div>
+        </article>
+
+        <script>
+            setTimeout('incom_fix()', 2800)
+
+            function incom_fix(){
+                $('.word_wrap.w2 .word').addClass('on');
+            }
+        </script>
+
+
+        <div class="contents_wrap">
+            <article class="contents intro">
+                <div class="rel">
+                    <div class="inner">
+                        <div class="text left">
+                            <h1 class="i_h1">INCOM에 오신것을 환영합니다.</h1>
+                            <p class="sub">인천의 다양한 맛집과 지리, 정보를 공유하는<br>인천을 위한 커뮤니티 INCOM입니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="ani_wrap">
+                        <i class="line"></i>
+                        <div class="rotate"></div>
+                    </i>
+                </div>
+            </article>
+
+            <article class="contents rest">
+                <div class="inner">
+                    <div class="text right">
+                        <h1 class="i_h1">RESTAURANT</h1>
+                        <p class="sub">먹거리가 가득한 다양한 맛집과 카페거리<br>실제 주민들이 추천하는 진짜 맛집만 둘러보실 수 있습니다.</p>
+
+                        <div class="btn_area">
+                            <a href="restaurant.html" class="go_link">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="contents play">
+                <div class="inner">
+                    <div class="text left">
+                        <h1 class="i_h1">THINGS TO PLAY WITH</h1>
+                        <p class="sub">대한민국을 대표하는 관광 여행지 인천<br>여행코스와 관광지에 대한 설명을 살펴볼 수 있습니다.</p>
+
+                        <div class="btn_area">
+                            <a href="play.html" class="go_link">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="contents estate">
+                <div class="inner">
+                    <div class="text right">
+                        <h1 class="i_h1">REAL ESTATE</h1>
+                        <p class="sub">살기좋은 동네 인천의 다양한 거주지를<br>투명한 정보와 함께 공개합니다.</p>
+
+                        <div class="btn_area">
+                            <a href="estate.html" class="go_link">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="contents news">
+                <div class="inner">
+                    <div class="text left">
+                        <h1 class="i_h1">NEWS</h1>
+                        <p class="sub">관리자가 직접 올리는 최근 소식 및 근황에 대한<br>스토리를 살펴볼 수 있습니다.</p>
+
+                        <div class="btn_area">
+                            <a href="news.html" class="go_link">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <footer class="footer">
+                <div class="main_inner">
+                    <div class="logo_area vt_top">
+                        <a href="index.html" class="logo">
+                            <img src="img/logo.png" alt="INCOM">
+                        </a>
+                    </div>
+                    <div class="info_area vt_top">
+                        <div class="info_line">
+                            <div class="i_wrap vt_mid">푸터 : 정보</div>
+                            <div class="i_wrap vt_mid">푸터 : 정보</div>
+                            <div class="i_wrap vt_mid">푸터 : 정보</div>
+                        </div>
+                        <div class="info_line">
+                            <div class="i_wrap">푸터 : 정보</div>
+                        </div>
+                    </div>
+                    <div class="term_area vt_top">
+                        <a href="" class="term_a">이용약관</a>
+                        <a href="" class="term_a">개인정보처리방침</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+</body>
+</html>

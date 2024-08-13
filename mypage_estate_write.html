@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" property='og:title' />
+    <meta content="" property='og:url' />
+    <meta content="" property='og:description' />
+    <meta content="" property='og:image' />
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <div class="logo_area vt_mid">
+                <a href="index.html" class="logo"></a>
+            </div>
+            <div class="nav_area vt_mid">
+                <nav class="nav">
+                    <a href="home.html" class="nav_a">메뉴1</a>
+                    <a href="restaurant.html" class="nav_a">메뉴2</a>
+                    <a href="estate.html" class="nav_a">메뉴3</a>
+                    <a href="deal.html" class="nav_a">메뉴4</a>
+                    <a href="community.html" class="nav_a">메뉴5</a>
+                </nav>
+            </div>
+            <div class="mem_area">
+                <a href="" class="mem_a">로그인</a>
+                <a href="" class="mem_a">회원가입</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="write_food" class="page">
+
+        <div class="inner">
+            <h1 class="my_h1">부동산 추가하기</h1>
+
+            <form name="new_food">
+
+            <article class="form_disp">
+                <div class="f_block">
+                    <label for="est_name" class="f_lab">제목</label>
+                    <div class="i_wrap">
+                        <input type="text" name="est_name" id="est_name" placeholder="제목을 입력해주세요." class="input">
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label for="est_adr" class="f_lab">주소</label>
+                    <div class="i_wrap">
+                        <div class="line">
+                            <input type="text" name="est_adr" id="est_adr" class="input ip2" readonly>
+                            <button type="button" class="adr_btn">주소검색</button>
+                        </div>
+                        <div class="line">
+                            <input type="text" name="est_adr2" id="est_adr2" class="input">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="f_block">
+                    <label class="f_lab">대표 이미지</label>
+                    <div class="i_wrap">
+                        <div class="img_wrap">
+                            <input type="file" name="myimg" id="myimg" class="file" onchange="read_myimg(this)">
+                            <label for="myimg" class="back">
+                                <div class="grid">
+                                    <img src="img/img_empty.png" id="thumb" alt="no image" class="empty">
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label class="f_lab">주요 정보</label>
+                    <div class="i_wrap">
+                        <div class="sb_block">
+                            <div class="sb_half vt_mid">
+                                <label for="est_loc" class="sb_lab vt_top">지역</label>
+                                <div class="sb_opt vt_top">
+                                    <select name="est_loc" id="est_loc" class="select on">
+                                        <option value="default">선택</option>
+                                        <option value="loc1">부평구</option>
+                                        <option value="loc2">남동구</option>
+                                        <option value="loc3">연수구</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="sb_half vt_mid">
+                                <label for="est_type" class="sb_lab vt_top">주거형태</label>
+                                <div class="sb_opt vt_top">
+                                    <select name="est_loc1" id="est_type" class="select on">
+                                        <option value="default">선택</option>
+                                        <option value="type1">아파트</option>
+                                        <option value="type2">오피스텔</option>
+                                        <option value="type3">주택</option>
+                                    </select>
+                                    <select name="est_loc2" id="est_loc2" class="select opt1">
+                                        <option value="default">선택</option>
+                                        <option value="loc2_1">부평로</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sb_block">
+                            <label for="est_pri1" class="sb_lab vt_top">분양가(최고가)</label>
+                            <div class="sb_opt vt_top">
+                                <input type="number" name="est_pri1" id="est_pri1" class="input pr">
+                                <span class="vt_mid gap">~</span>
+                                <input type="number" name="est_pri2" id="est_pri2" class="input pr">
+                            </div>
+                        </div>
+
+                        <div class="sb_block">
+                            <label for="est_num" class="sb_lab vt_top">문의 전화</label>
+                            <div class="sb_opt vt_top">
+                                <input type="number" name="est_num" id="est_num" class="input" placeholder="번호만 입력해주세요">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label class="f_lab">추가 정보</label>
+                    <div class="i_wrap">
+                        <div class="sb_block">
+                            <label for="location_1" class="sb_lab vt_top">위치</label>
+                            <div class="sb_opt vt_top">
+                                <select name="location_1" id="location_1" class="select on">
+                                    <option value="default">선택</option>
+                                    <option value="loc1_1">부평구</option>
+                                    <option value="loc1_2">남동구</option>
+                                    <option value="loc1_3">연수구</option>
+                                </select>
+                                <select name="location_2" id="location_2" class="select opt1">
+                                    <option value="default">선택</option>
+                                    <option value="loc2_1">부평로</option>
+                                </select>
+                                <select name="location_2" id="location_2" class="select opt2">
+                                    <option value="default">선택</option>
+                                    <option value="loc2_1">구월로</option>
+                                </select>
+                                <select name="location_2" id="location_2" class="select opt3">
+                                    <option value="default">선택</option>
+                                    <option value="loc2_1">연수로</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="sb_block">
+                            <label for="mysite" class="sb_lab vt_top">웹사이트</label>
+                            <div class="sb_opt vt_top">
+                                <input type="text" name="mysite" id="mysite" class="input" placeholder="사이트 주소를 입력해주세요">
+                            </div>
+                        </div>
+                        <div class="sb_block">
+                            <label for="chat" class="sb_lab vt_top">채팅</label>
+                            <div class="sb_opt vt_top">
+                                <input type="checkbox" name="chat" id="chat" class="toggle">
+                                <span class="txt vt_mid">OFF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <div class="f_btn_area">
+                <button type="submit" class="submit_btn">등록하기</button>
+            </div>
+
+            </form>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="inner">
+            <div class="logo_area vt_top">
+                <a href="index.html" class="logo"></a>
+            </div>
+            <div class="info_area vt_top">
+                <div class="info_line">
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                </div>
+                <div class="info_line">
+                    <div class="i_wrap">푸터 : 정보</div>
+                </div>
+            </div>
+            <div class="term_area vt_top">
+                <a href="" class="term_a">이용약관</a>
+                <a href="" class="term_a">개인정보처리방침</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
