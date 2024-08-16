@@ -22,40 +22,66 @@
 <body>
     <header class="header">
         <div class="inner">
+            <button type="button" class="ham_btn">
+                <img src="img/ham.png" alt="메뉴">
+            </button>
+
             <div class="logo_area vt_mid">
-                <a href="index.html" class="logo"></a>
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="INCOM">
+                </a>
             </div>
-            <div class="nav_area vt_mid">
-                <nav class="nav">
-                    <a href="home.html" class="nav_a">메뉴1</a>
-                    <a href="restaurant.html" class="nav_a">메뉴2</a>
-                    <a href="estate.html" class="nav_a">메뉴3</a>
-                    <a href="deal.html" class="nav_a">메뉴4</a>
-                    <a href="community.html" class="nav_a">메뉴5</a>
-                </nav>
-            </div>
-            <div class="mem_area">
-                <a href="" class="mem_a">로그인</a>
-                <a href="" class="mem_a">회원가입</a>
+
+            <div class="mob_nav on vt_mid">
+
+                <div class="black_bg"></div>
+
+                <div class="white_bg">
+                    <div class="rel">
+                        <div class="close_area">
+                            <button type="button" class="close_btn">
+                                <img src="img/close_btn.png" alt="닫기">
+                            </button>
+                        </div>
+
+                        <div class="name">MENU</div>
+
+                        <div class="nav_area vt_mid">
+                            <nav class="nav">
+                                <a href="restaurant.html" class="nav_a">맛집</a>
+                                <a href="play.html" class="nav_a">놀거리</a>
+                                <a href="estate.html" class="nav_a">부동산</a>
+                                <a href="news.html" class="nav_a">뉴스</a>
+                                <a href="mypage.html" class="nav_a">마이페이지</a>
+                            </nav>
+                        </div>
+
+                        <div class="mem_area vt_mid">
+                            <a href="login.html" class="mem_a">로그인</a>
+                            <a href="join.html" class="mem_a">회원가입</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="mypage" class="page">
+    <section id="mypage" class="page my_main">
 
         <div class="inner">
             <aside class="my_left vt_top">
                 <ul class="my_ul">
-                    <li class="my_li"><a href="" class="my_a on">마이페이지</a></li>
-                    <li class="my_li"><a href="" class="my_a">나의 맛집</a></li>
-                    <li class="my_li"><a href="" class="my_a">나의 부동산</a></li>
-                    <li class="my_li"><a href="" class="my_a">문의내역</a></li>
+                    <li class="my_li"><a href="mypage.html" class="my_a on">마이페이지</a></li>
+                    <li class="my_li"><a href="mypage_food.html" class="my_a">나의 맛집</a></li>
+                    <li class="my_li"><a href="mypage_play.html" class="my_a">나의 놀거리</a></li>
+                    <li class="my_li"><a href="mypage_estate.html" class="my_a">나의 부동산</a></li>
+                    <li class="my_li"><a href="mypage_inquiry.html" class="my_a">문의내역</a></li>
                 </ul>
             </aside>
             
             <article class="my_right vt_top">
                 <div class="title_area">
-                    <h1 class="my_h1">마이페이지</h1>
+                    <h1 class="my_h1">마이페이지 <span class="arrow"><img src="img/arrow_right.png" alt="메뉴 열기"></span></h1>
                 </div>
 
                 <div class="my_contents">
@@ -112,6 +138,73 @@
                                 </div>
                                 <div class="info_area">
                                     <h3 class="title">벨벳</h3>
+
+                                    <div class="mybtn_area">
+                                        <button type="button" class="btns btn1">보기</button>
+                                        <button type="button" class="btns btn2">수정</button>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="del_btn">
+                                    <img src="img/del_btn.png" alt="삭제">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my_block">
+                        <div class="h2_area">
+                            <h2 class="my_h2 vt_mid">나의 놀거리</h2>
+                            <button type="button" class="more_btn vt_mid">+</button>
+                        </div>
+
+                        <div class="box_wrap">
+                            <div class="box vt_top">
+                                <div class="img_area">
+                                    <div class="grid">
+                                        <img src="img/play1.jpg" alt="img">
+                                    </div>
+                                </div>
+                                <div class="info_area">
+                                    <h3 class="title">차이나타운</h3>
+
+                                    <div class="mybtn_area">
+                                        <button type="button" class="btns btn1">보기</button>
+                                        <button type="button" class="btns btn2">수정</button>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="del_btn">
+                                    <img src="img/del_btn.png" alt="삭제">
+                                </button>
+                            </div>
+                            <div class="box vt_top">
+                                <div class="img_area">
+                                    <div class="grid">
+                                        <img src="img/play3.jpg" alt="img">
+                                    </div>
+                                </div>
+                                <div class="info_area">
+                                    <h3 class="title">트라이볼</h3>
+
+                                    <div class="mybtn_area">
+                                        <button type="button" class="btns btn1">보기</button>
+                                        <button type="button" class="btns btn2">수정</button>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="del_btn">
+                                    <img src="img/del_btn.png" alt="삭제">
+                                </button>
+                            </div>
+                            <div class="box vt_top">
+                                <div class="img_area">
+                                    <div class="grid">
+                                        <img src="img/play6.jpg" alt="img">
+                                    </div>
+                                </div>
+                                <div class="info_area">
+                                    <h3 class="title">해넘이공원</h3>
 
                                     <div class="mybtn_area">
                                         <button type="button" class="btns btn1">보기</button>

@@ -151,6 +151,87 @@ $(document).ready(function(){
     });
 
 
+
+    var winW = $(window).innerWidth();
+
+    var mobW = $('.mob_nav .white_bg').innerWidth();
+
+    if(winW <= 768) {
+        $('.mob_nav').removeClass('on');
+
+    }else{
+        $('.mob_nav').addClass('on');
+    }
+
+    $(window).resize(function(){
+        var win_reW = $(window).innerWidth();
+
+        if(win_reW <= 768) {
+            $('.mob_nav').removeClass('on');
+        }else{
+            $('.mob_nav').addClass('on');
+        }
+    });
+
+    $('.mob_nav .white_bg').css({'left': -mobW + 'px'});
+
+    $('.ham_btn').click(function(){
+        $('.mob_nav').addClass('on');
+        $('.mob_nav .white_bg').stop().animate({'left': '0'}, 300);
+    });
+
+    $('.mob_nav .black_bg, .mob_nav .close_btn').click(function(){
+        $('.mob_nav').removeClass('on');
+        $('.mob_nav .white_bg').css({'left': -mobW + 'px'});
+    });
+
+
+
+    if(winW <= 960) {
+        $('#mypage .my_left').slideUp(0);
+        $('#mypage .my_h1').addClass('clickable');
+
+    }else{
+        $('#mypage .my_left').slideDown(0);
+        $('#mypage .my_h1').removeClass('clickable');
+    }
+
+    $('#mypage .my_h1').each(function(data,index){
+        $('#mypage .my_h1').data('menuOpen', true);
+    });
+
+    $('#mypage .my_h1').click(function(){
+        if($(this).data('menuOpen') && $(this).hasClass('clickable')){
+            $(this).data('menuOpen', false);
+            $('#mypage .my_left').stop().slideDown(300);
+            $(this).children('.arrow').css({'transform': 'rotate(-90deg)'});
+        
+        }else if($(this).data('menuOpen') == false) {
+            $(this).data('menuOpen', true);
+            $('#mypage .my_left').stop().slideUp(300);
+            $(this).children('.arrow').css({'transform': 'rotate(90deg)'});
+        }
+    });
+
+
+    $(window).resize(function(){
+        var win_reW = $(window).innerWidth();
+
+        if(win_reW <= 960) {
+            $('#mypage .my_h1').addClass('clickable');
+            $('#mypage .my_left').stop().slideUp(0);
+            $('#mypage .my_h1').data('menuOpen', true);
+            $('#mypage .my_h1 .arrow').css({'transform': 'rotate(90deg)'});
+            
+        }else{
+            $('#mypage .my_h1').removeClass('clickable');
+            $('#mypage .my_left').slideDown(0);
+            $('#mypage .my_h1').data('menuOpen', false);
+        }
+    });
+
+
+
     $('#write_food .add_btn').click(function(){
         var id = $('#write_food .menu:last-child .file').attr('id');
         var number = /[^0-9]/g;
@@ -351,6 +432,9 @@ $(document).ready(function(){
         },
     });
 
+
+    $('#play_detail').addClass('on');
+
     var ps_W = $('.p_swiper').innerWidth();
     var ps_H = $('.p_swiper').innerHeight();
 
@@ -361,6 +445,39 @@ $(document).ready(function(){
         var psH_re = $('.p_swiper').innerHeight();
         
         $('.p_swiper .p_li img').css({'width': psW_re + 'px', 'height': psH_re + 'px'});
+    });
+
+    $('#play_detail').removeClass('on');
+
+
+    $('#play .playbox').click(function(){
+        $('#play_detail').fadeIn(300);
+    });
+
+    $('.pop .close_btn, .pop .black_bg').click(function(){
+        $('.pop').fadeOut(300);
+    });
+
+    $('#play_detail .r_li').click(function(){
+        $('#play_detail .r_li').removeClass('on');
+        $(this).addClass('on');
+
+        $('#play_detail .tab').removeClass('on');
+        $('#play_detail .tab').eq($(this).index()).addClass('on');
+    });
+
+
+    $('#mypage .f_li').click(function(){
+        $('#mypage .f_li').removeClass('on');
+        $(this).addClass('on');
+
+        $('.my_contents .box_wrap .box').removeClass('on');
+
+        if($(this).index() == '0') {
+            $('.my_contents .box_wrap .my_upload').addClass('on');
+        }else {
+            $('.my_contents .box_wrap .my_book').addClass('on');
+        }
     });
 
 
@@ -384,6 +501,19 @@ function read_myimg(input) {
         document.getElementById('thumb').src = e.target.result;
 
         $('#thumb').removeClass('empty');
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+function read_menu(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+        document.getElementById('thumb1').src = e.target.result;
+
+        $('#thumb1').addClass('on');
+        $('.no_txt').removeClass('on')
         };
         reader.readAsDataURL(input.files[0]);
     }
