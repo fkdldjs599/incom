@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" property='og:title' />
+    <meta content="" property='og:url' />
+    <meta content="" property='og:description' />
+    <meta content="" property='og:image' />
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <button type="button" class="ham_btn">
+                <img src="img/ham.png" alt="메뉴">
+            </button>
+
+            <div class="logo_area vt_mid">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="INCOM">
+                </a>
+            </div>
+
+            <div class="mob_nav on vt_mid">
+
+                <div class="black_bg"></div>
+
+                <div class="white_bg">
+                    <div class="rel">
+                        <div class="close_area">
+                            <button type="button" class="close_btn">
+                                <img src="img/close_btn.png" alt="닫기">
+                            </button>
+                        </div>
+
+                        <div class="name">MENU</div>
+
+                        <div class="nav_area vt_mid">
+                            <nav class="nav">
+                                <a href="restaurant.html" class="nav_a">맛집</a>
+                                <a href="play.html" class="nav_a">놀거리</a>
+                                <a href="estate.html" class="nav_a">부동산</a>
+                                <a href="news.html" class="nav_a">뉴스</a>
+                                <a href="mypage.html" class="nav_a">마이페이지</a>
+                            </nav>
+                        </div>
+
+                        <div class="mem_area vt_mid">
+                            <a href="login.html" class="mem_a">로그인</a>
+                            <a href="join.html" class="mem_a">회원가입</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="write_play" class="page">
+
+        <div class="inner">
+            <h1 class="my_h1">놀거리 추가하기</h1>
+
+            <form name="new_play">
+
+            <article class="form_disp">
+                <div class="f_block">
+                    <label class="f_lab">대표 이미지</label>
+                    <div class="i_wrap">
+                        <div class="img_wrap">
+                            <input type="file" name="" id="" class="file">
+                            <label for="" class="p_lab"></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label for="play_title" class="f_lab">제목</label>
+                    <div class="i_wrap">
+                        <input type="text" name="play_title" id="play_title" placeholder="제목을 입력해주세요." class="input">
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label for="play_detail" class="f_lab">설명</label>
+                    <div class="i_wrap">
+                        <textarea name="play_detail" id="play_detail" placeholder="설명을 입력해주세요." class="textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label for="location" class="f_lab">위치</label>
+                    <div class="i_wrap">
+                        <input type="text" name="location" id="location" placeholder="제목을 입력해주세요." class="input">
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label for="parking" class="f_lab">주차시설</label>
+                    <div class="i_wrap">
+                        <input type="text" name="parking" id="parking" placeholder="제목을 입력해주세요." class="input">
+                    </div>
+                </div>
+
+                <div class="f_block">
+                    <label for="traffic" class="f_lab">교통편</label>
+                    <div class="i_wrap">
+                        <input type="text" name="traffic" id="traffic" placeholder="제목을 입력해주세요." class="input">
+                    </div>
+                </div>
+            </article>
+
+            <div class="f_btn_area">
+                <button type="submit" class="submit_btn">등록하기</button>
+            </div>
+
+            </form>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="inner">
+            <div class="logo_area vt_top">
+                <a href="index.html" class="logo"></a>
+            </div>
+            <div class="info_area vt_top">
+                <div class="info_line">
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                </div>
+                <div class="info_line">
+                    <div class="i_wrap">푸터 : 정보</div>
+                </div>
+            </div>
+            <div class="term_area vt_top">
+                <a href="" class="term_a">이용약관</a>
+                <a href="" class="term_a">개인정보처리방침</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

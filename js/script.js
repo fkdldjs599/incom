@@ -480,6 +480,12 @@ $(document).ready(function(){
         }
     });
 
+    $('#mypage .box .del_btn').click(function(){
+        if(confirm("삭제하시겠습니까?")){
+            location.href='';
+        }
+    });
+
 
 
 });

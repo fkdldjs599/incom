@@ -650,7 +650,7 @@ input.input {height: 40px; border-radius: 10px; border: 1px solid #D4D4D4; box-s
 
 .my_right {width: calc(100% - 250px); padding-left: 50px; box-sizing: border-box;}
 .my_right .title_area {margin-bottom: 50px; padding-bottom: 20px; border-bottom: 1px solid black;}
-.my_right .title_area .my_h1 {font-size: 40px; box-sizing: border-box; font-weight: bold; display: inline-block; vertical-align: middle; width: calc(100% - 250px); cursor: pointer;}
+.my_right .title_area .my_h1 {font-size: 40px; box-sizing: border-box; font-weight: bold; display: inline-block; vertical-align: middle; width: calc(100% - 250px);}
 .my_right .title_area .my_h1 .arrow {width: 25px; display: inline-block; transform: rotate(90deg); transition: 300ms; display: none;}
 .my_right .title_area .my_h1 .arrow img {width: 100%;}
 .my_right .my_contents {min-height: 1000px; padding-bottom: 150px; box-sizing: border-box;}
@@ -730,8 +730,8 @@ input.input {height: 40px; border-radius: 10px; border: 1px solid #D4D4D4; box-s
 }
 
 
-#write_food {padding: 50px 0 150px; box-sizing: border-box;}
-#write_food .my_h1 {font-size: 30px; font-weight: bold; margin-bottom: 50px;}
+#write_food, #write_estate, #write_play {padding: 50px 0 150px; box-sizing: border-box;}
+#write_food .my_h1, #write_estate .my_h1, #write_play .my_h1 {font-size: 30px; font-weight: bold; margin-bottom: 50px;}
 
 .form_disp .f_block {margin-bottom: 40px;}
 .form_disp .f_block:last-child {margin-bottom: 0;}
@@ -743,7 +743,7 @@ input.input {height: 40px; border-radius: 10px; border: 1px solid #D4D4D4; box-s
 .form_disp .f_block .sb_block:last-child {margin-bottom: 0;}
 .form_disp .f_block .sb_block .sb_lab {font-size: 18px; font-weight: 500; width: 200px; margin-top: 10px;}
 .form_disp .f_block .sb_block .sb_opt {width: calc(100% - 200px); min-height: 40px; line-height: 40px;}
-.form_disp .f_block .sb_block .sb_opt .select {width: 200px; border: 1px solid #D4D4D4; border-radius: 10px; height: 40px; padding: 0 15px; box-sizing: border-box; margin-right: 5px; appearance: none; background: url("../img/arrow_down.png") no-repeat center right / 40px 40px; font-size: 16px; display: none;}
+.form_disp .f_block .sb_block .sb_opt .select {width: 100%; max-width: 200px; border: 1px solid #D4D4D4; border-radius: 10px; height: 40px; padding: 0 15px; box-sizing: border-box; margin-right: 5px; appearance: none; background: url("../img/arrow_down.png") no-repeat center right / 40px 40px; font-size: 16px; display: none;}
 .form_disp .f_block .sb_block .sb_opt .select.on {display: inline-block;}
 .form_disp .f_block .sb_block .sb_opt .day_wrap {margin-bottom: 15px;}
 .form_disp .f_block .sb_block .sb_opt .day_wrap:last-child {margin-bottom: 0;}
@@ -783,7 +783,25 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
 .form_disp .f_block .i_wrap .input.ip2 {width: calc(100% - 125px); margin-right: 5px;}
 .form_disp .f_block .i_wrap .adr_btn {width: 120px; height: 40px; background: #1BC6AF; font-size: 14px; color: #fff; border-radius: 10px; font-weight: 500;}
 
+.form_disp .f_block .sb_block .input.pr {width: 200px;}
 .form_disp .f_block .sb_block .sb_half {width: 50%;}
+.form_disp .f_block .sb_block .sb_half:nth-child(2n) .sb_lab {padding-left: 30px; box-sizing: border-box;}
+.form_disp .f_block .sb_block .gap {font-size: 16px; width: 30px; text-align: center;}
+
+.form_disp .f_block .sb_block .es_half {width: calc((100% - 30px) / 2); margin-bottom: 10px;}
+.form_disp .f_block .sb_block .es_half .sb_lab {width: 150px;}
+.form_disp .f_block .sb_block .es_half:nth-child(2n-1) {margin-right: 30px;}
+.form_disp .f_block .sb_block .es_half:nth-child(2n) .sb_lab {padding-left: 20px; box-sizing: border-box;}
+.form_disp .f_block .sb_block .es_half .sb_opt {width: calc(100% - 150px);}
+.form_disp .f_block .sb_block .es_half .sb_opt #household {width: calc(100% - 50px);}
+.form_disp .f_block .sb_block .es_half .sb_opt .txt {font-size: 16px; display: inline-block; vertical-align: middle; width: 40px; text-align: center;}
+
+.form_disp .f_block .sb_block .es_half .sb_opt .area_wrap {width: calc((100% - 30px) / 2);}
+.form_disp .f_block .sb_block .es_half .sb_opt .area {width: calc(100% - 35px);}
+.form_disp .f_block .sb_block .es_half .sb_opt .unit {width: 35px; font-size: 16px; text-align: center;}
+.form_disp .f_block .sb_block .es_half .sb_opt .gap {width: 30px; text-align: center; font-size: 16px;}
+.form_disp .f_block .sb_block .es_half .sb_opt #per1,
+.form_disp .f_block .sb_block .es_half .sb_opt #per2 {width: calc((100% - 30px) / 2);}
 
 
 @media (max-width: 960px) {
@@ -809,6 +827,16 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
     .form_disp .f_block .textarea {height: 200px;}
 
     .form_disp .f_block .f_lab {font-size: 18px;}
+
+    .form_disp .f_block .sb_block .sb_half:nth-child(2n) .sb_lab {padding: 0;}
+
+    .form_disp .f_block .sb_block .es_half {width: calc((100% - 15px) / 2);}
+    .form_disp .f_block .sb_block .es_half:nth-child(2n-1) {margin-right: 15px;}
+    .form_disp .f_block .sb_block .es_half .sb_opt {width: 100%;}
+    .form_disp .f_block .sb_block .es_half:nth-child(2n) .sb_lab {padding: 0;}
+    .form_disp .f_block .sb_block .es_half .sb_opt .unit {width: 30px;}
+    .form_disp .f_block .sb_block .es_half .sb_opt .area {width: calc(100% - 30px);}
+
 }
 @media (max-width: 500px) {
     .form_disp .f_block .mymenu_wrap .menu {width: 100%; margin: 0 0 10px;}
@@ -826,6 +854,14 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
     .form_disp {margin-bottom: 50px;}
 
     .form_disp .f_block .mymenu_wrap .menu .img_area img {width: 470px;}
+
+    .form_disp .f_block .sb_block .sb_half {width: 100%; margin-bottom: 10px;}
+    .form_disp .f_block .sb_block .sb_half:last-child {margin-bottom: 0;}
+    .form_disp .f_block .sb_block .es_half {width: 100%; margin: 0; margin-bottom: 10px;}
+    .form_disp .f_block .sb_block .es_half:last-child {margin-bottom: 0;}
+    .form_disp .f_block .sb_block .input.pr {width: calc((100% - 30px) / 2);}
+    .form_disp .f_block .i_wrap .adr_btn {width: 80px;}
+    .form_disp .f_block .i_wrap .input.ip2 {width: calc(100% - 85px);}
 }
 @media (max-width: 340px) {
     .form_disp .f_block .sb_block .sb_opt .day_wrap .gap {display: none;}

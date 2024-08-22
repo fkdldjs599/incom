@@ -22,21 +22,46 @@
 <body>
     <header class="header">
         <div class="inner">
+            <button type="button" class="ham_btn">
+                <img src="img/ham.png" alt="메뉴">
+            </button>
+
             <div class="logo_area vt_mid">
-                <a href="index.html" class="logo"></a>
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="INCOM">
+                </a>
             </div>
-            <div class="nav_area vt_mid">
-                <nav class="nav">
-                    <a href="home.html" class="nav_a">메뉴1</a>
-                    <a href="restaurant.html" class="nav_a">메뉴2</a>
-                    <a href="estate.html" class="nav_a">메뉴3</a>
-                    <a href="deal.html" class="nav_a">메뉴4</a>
-                    <a href="community.html" class="nav_a">메뉴5</a>
-                </nav>
-            </div>
-            <div class="mem_area">
-                <a href="" class="mem_a">로그인</a>
-                <a href="" class="mem_a">회원가입</a>
+
+            <div class="mob_nav on vt_mid">
+
+                <div class="black_bg"></div>
+
+                <div class="white_bg">
+                    <div class="rel">
+                        <div class="close_area">
+                            <button type="button" class="close_btn">
+                                <img src="img/close_btn.png" alt="닫기">
+                            </button>
+                        </div>
+
+                        <div class="name">MENU</div>
+
+                        <div class="nav_area vt_mid">
+                            <nav class="nav">
+                                <a href="restaurant.html" class="nav_a">맛집</a>
+                                <a href="play.html" class="nav_a">놀거리</a>
+                                <a href="estate.html" class="nav_a">부동산</a>
+                                <a href="news.html" class="nav_a">뉴스</a>
+                                <a href="mypage.html" class="nav_a">마이페이지</a>
+                            </nav>
+                        </div>
+
+                        <div class="mem_area vt_mid">
+                            <a href="login.html" class="mem_a">로그인</a>
+                            <a href="join.html" class="mem_a">회원가입</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -46,7 +71,7 @@
         <div class="inner">
             <h1 class="my_h1">부동산 추가하기</h1>
 
-            <form name="new_food">
+            <form name="new_estate">
 
             <article class="form_disp">
                 <div class="f_block">
@@ -108,10 +133,6 @@
                                         <option value="type2">오피스텔</option>
                                         <option value="type3">주택</option>
                                     </select>
-                                    <select name="est_loc2" id="est_loc2" class="select opt1">
-                                        <option value="default">선택</option>
-                                        <option value="loc2_1">부평로</option>
-                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -124,11 +145,111 @@
                                 <input type="number" name="est_pri2" id="est_pri2" class="input pr">
                             </div>
                         </div>
+                    </div>
+                </div>
 
+                <div class="f_block">
+                    <label class="f_lab">부동산 정보</label>
+                    <div class="i_wrap">
                         <div class="sb_block">
-                            <label for="est_num" class="sb_lab vt_top">문의 전화</label>
-                            <div class="sb_opt vt_top">
-                                <input type="number" name="est_num" id="est_num" class="input" placeholder="번호만 입력해주세요">
+                            <div class="es_half vt_mid">
+                                <label for="business_name" class="sb_lab vt_top">사업명</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="text" name="business_name" id="business_name" class="input">
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="household" class="sb_lab vt_top">분양세대</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="number" name="household" id="household" class="input">
+                                    <span class="txt">세대</span>
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="area1" class="sb_lab vt_top">전용면적</label>
+                                <div class="sb_opt vt_top">
+                                    <div class="area_wrap vt_mid">
+                                        <input type="number" name="area1" id="area1" class="input area">
+                                        <span class="unit vt_mid">㎡</span>
+                                    </div>
+
+                                    <span class="gap vt_mid">~</span>
+
+                                    <div class="area_wrap vt_mid">
+                                        <input type="number" name="area1" id="area1" class="input area">
+                                        <span class="unit vt_mid">㎡</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="date1" class="sb_lab vt_top">모집공고</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="date" name="date1" id="date1" class="input date">
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="per1" class="sb_lab vt_top">청약기간</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="date" name="per1" id="per1" class="input date">
+
+                                    <span class="gap vt_mid">~</span>
+
+                                    <input type="date" name="per2" id="per2" class="input date">
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="special_date" class="sb_lab vt_top">특별공급</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="date" name="special_date" id="special_date" class="input date">
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="rank1" class="sb_lab vt_top">1순위</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="date" name="rank1" id="rank1" class="input date">
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="rank2" class="sb_lab vt_top">2순위</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="date" name="rank2" id="rank2" class="input date">
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="plan" class="sb_lab vt_top">시공예정</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="text" name="plan" id="plan" class="input">
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="company" class="sb_lab vt_top">시행사</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="number" name="company" id="company" class="input">
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="location" class="sb_lab vt_top">공급위치</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="text" name="location" id="location" class="input">
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="in_date" class="sb_lab vt_top">입주예정</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="text" name="in_date" id="in_date" class="input">
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="est_num" class="sb_lab vt_top">문의</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="text" name="est_num" id="est_num" class="input">
+                                </div>
+                            </div>
+                            <div class="es_half vt_mid">
+                                <label for="note" class="sb_lab vt_top">특이사항</label>
+                                <div class="sb_opt vt_top">
+                                    <input type="text" name="note" id="note" class="input">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -138,34 +259,11 @@
                     <label class="f_lab">추가 정보</label>
                     <div class="i_wrap">
                         <div class="sb_block">
-                            <label for="location_1" class="sb_lab vt_top">위치</label>
+                            <label for="est_num" class="sb_lab vt_top">상세정보</label>
                             <div class="sb_opt vt_top">
-                                <select name="location_1" id="location_1" class="select on">
-                                    <option value="default">선택</option>
-                                    <option value="loc1_1">부평구</option>
-                                    <option value="loc1_2">남동구</option>
-                                    <option value="loc1_3">연수구</option>
-                                </select>
-                                <select name="location_2" id="location_2" class="select opt1">
-                                    <option value="default">선택</option>
-                                    <option value="loc2_1">부평로</option>
-                                </select>
-                                <select name="location_2" id="location_2" class="select opt2">
-                                    <option value="default">선택</option>
-                                    <option value="loc2_1">구월로</option>
-                                </select>
-                                <select name="location_2" id="location_2" class="select opt3">
-                                    <option value="default">선택</option>
-                                    <option value="loc2_1">연수로</option>
-                                </select>
-                            </div>
-                        </div>
-
-
-                        <div class="sb_block">
-                            <label for="mysite" class="sb_lab vt_top">웹사이트</label>
-                            <div class="sb_opt vt_top">
-                                <input type="text" name="mysite" id="mysite" class="input" placeholder="사이트 주소를 입력해주세요">
+                                <input type="file" name="dt_file" id="dt_file" class="file">
+                                <label for="dt_file" class="dt_lab">사진 첨부</label>
+                                <textarea name="detail" id="detail" class="textarea" placeholder="상세정보를 입력해주세요."></textarea>
                             </div>
                         </div>
                         <div class="sb_block">
