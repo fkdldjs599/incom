@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <meta content="WELCOME TO INCOM" property='og:title' />
+    <!-- <meta content="" property='og:url' /> -->
+    <meta content="환영합니다!" property='og:description' />
+    <!-- <meta content="" property='og:image' /> -->
+    <title>INCOM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <button type="button" class="ham_btn">
+                <img src="img/ham.png" alt="메뉴">
+            </button>
+
+            <div class="logo_area vt_mid">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="INCOM">
+                </a>
+            </div>
+
+            <div class="mob_nav on vt_mid">
+
+                <div class="black_bg"></div>
+
+                <div class="white_bg">
+                    <div class="rel">
+                        <div class="close_area">
+                            <button type="button" class="close_btn">
+                                <img src="img/close_btn.png" alt="닫기">
+                            </button>
+                        </div>
+
+                        <div class="name">MENU</div>
+
+                        <div class="nav_area vt_mid">
+                            <nav class="nav">
+                                <a href="restaurant.html" class="nav_a">맛집</a>
+                                <a href="play.html" class="nav_a">놀거리</a>
+                                <a href="estate.html" class="nav_a">부동산</a>
+                                <a href="news.html" class="nav_a">뉴스</a>
+                                <a href="faq.html" class="nav_a">FAQ</a>
+                            </nav>
+                        </div>
+
+                        <div class="mem_area vt_mid" onclick="location.href='mypage.html'">
+                            <div class="circle vt_mid">
+                                <div class="grid">
+                                    <img src="img/food_ai.jpg" alt="프로필">
+                                </div>
+                            </div>
+                            <div class="nick_area vt_mid">
+                                <span class="nick vt_mid">닉네임닉네임닉네임</span> <span class="vt_mid">님</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="mypage" class="page">
+
+        <div class="inner">
+            <aside class="my_left vt_top">
+                <ul class="my_ul">
+                    <li class="my_li"><a href="mypage.html" class="my_a">마이페이지</a></li>
+                    <li class="my_li"><a href="mypage_food.html" class="my_a">나의 맛집</a></li>
+                    <li class="my_li"><a href="mypage_play.html" class="my_a">나의 놀거리</a></li>
+                    <li class="my_li"><a href="mypage_estate.html" class="my_a">나의 부동산</a></li>
+                    <li class="my_li"><a href="mypage_inquiry.html" class="my_a on">문의내역</a></li>
+                </ul>
+            </aside>
+            
+            <article class="my_right vt_top">
+                <div class="title_area">
+                    <h1 class="my_h1">문의내역 <span class="arrow"><img src="img/arrow_right.png" alt="메뉴 열기"></span></h1>
+                </div>
+
+                <div class="my_contents">
+                    <table class="q_table">
+                        <tr class="first">
+                            <th class="th th1">순번</th>
+                            <th class="th th2">제목</th>
+                            <th class="th th3">날짜</th>
+                            <th class="th th4">처리상태</th>
+                        </tr>
+                        <tr>
+                            <td class="td td1">4</td>
+                            <td class="td td2">문의제목문의제목문의제목문의제목문의제목문의제목문의제목문의제목문의제목문의제목</td>
+                            <td class="td td3">2024.01.01</td>
+                            <td class="td td4">답변대기</td>
+                        </tr>
+                        <tr class="ans">
+                            <td class="td td1">3</td>
+                            <td class="td td2">문의제목문의제목문의제목문의제목문의제목문의제목문의제목문의제목문의제목문의제목</td>
+                            <td class="td td3">2024.01.01</td>
+                            <td class="td td4 ans">답변완료</td>
+                        </tr>
+                        <tr>
+                            <td class="td td1">2</td>
+                            <td class="td td2">문의제목문의제목문의제목문의제목문의제목문의제목문의제목문의제목문의제목문의제목</td>
+                            <td class="td td3">2024.01.01</td>
+                            <td class="td td4">답변대기</td>
+                        </tr>
+                        <tr class="ans">
+                            <td class="td td1">1</td>
+                            <td class="td td2">문의제목문의제목문의제목문의제목문의제목문의제목문의제목문의제목문의제목문의제목</td>
+                            <td class="td td3">2024.01.01</td>
+                            <td class="td td4 ans">답변완료</td>
+                        </tr>
+                    </table>
+
+                    <div class="add_area">
+                        <button type="button" class="add_btn" onclick="location.href='inquiry_form.html'">1:1 문의하기</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="main_inner">
+            <div class="logo_area vt_top">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="INCOM">
+                </a>
+            </div>
+            <div class="info_area vt_top">
+                <div class="info_line">
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                </div>
+                <div class="info_line">
+                    <div class="i_wrap">푸터 : 정보</div>
+                </div>
+            </div>
+            <div class="term_area vt_top">
+                <a href="" class="term_a">이용약관</a>
+                <a href="" class="term_a">개인정보처리방침</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="" property='og:title' />
-    <meta content="" property='og:url' />
-    <meta content="" property='og:description' />
-    <meta content="" property='og:image' />
-    <title>Title</title>
+
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <meta content="WELCOME TO INCOM" property='og:title' />
+    <!-- <meta content="" property='og:url' /> -->
+    <meta content="환영합니다!" property='og:description' />
+    <!-- <meta content="" property='og:image' /> -->
+    <title>INCOM</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -27,7 +31,9 @@
             </button>
 
             <div class="logo_area vt_mid">
-                <a href="index.html" class="logo"></a>
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="INCOM">
+                </a>
             </div>
 
             <div class="mob_nav on vt_mid">
@@ -46,17 +52,17 @@
 
                         <div class="nav_area vt_mid">
                             <nav class="nav">
-                                <a href="home.html" class="nav_a">메인</a>
                                 <a href="restaurant.html" class="nav_a">맛집</a>
+                                <a href="play.html" class="nav_a">놀거리</a>
                                 <a href="estate.html" class="nav_a">부동산</a>
                                 <a href="news.html" class="nav_a">뉴스</a>
-                                <a href="mypage.html" class="nav_a">마이페이지</a>
+                                <a href="faq.html" class="nav_a">FAQ</a>
                             </nav>
                         </div>
 
                         <div class="mem_area vt_mid">
-                            <a href="" class="mem_a">로그인</a>
-                            <a href="" class="mem_a">회원가입</a>
+                            <a href="login.html" class="mem_a">로그인</a>
+                            <a href="join.html" class="mem_a">회원가입</a>
                         </div>
                     </div>
                 </div>
@@ -74,7 +80,7 @@
                         <p class="ok_txt">회원가입이 완료되었습니다.</p>
 
                         <div class="btn_area">
-                            <button type="button" class="go_login">로그인하러 가기</button>
+                            <button type="button" class="go_login" onclick="location.href='login.html'">로그인하러 가기</button>
                         </div>
                     </div>
                 </section>
@@ -83,9 +89,11 @@
     </section>
 
     <footer class="footer">
-        <div class="inner">
+        <div class="main_inner">
             <div class="logo_area vt_top">
-                <a href="index.html" class="logo"></a>
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="INCOM">
+                </a>
             </div>
             <div class="info_area vt_top">
                 <div class="info_line">

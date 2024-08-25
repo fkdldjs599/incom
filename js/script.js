@@ -31,7 +31,9 @@ $(document).ready(function(){
                     $(this).find('.sub').animate({'opacity':'1', 'margin-left': '0'}, 700);
                     $(this).find('.btn_area').animate({'opacity':'1', 'margin-left': '0'}, 1100);
                     
-                    $(this).find('.line').css({'animation':'lineup 1s 1.5s'});
+                    $(this).find('.line1').css({'animation':'lineup 1s 1.5s'});
+                    $(this).find('.line2').css({'animation':'lineright 1s 1.5s'});
+                    $(this).find('.infinite').css({'animation': 'rotate 10s infinite linear'});
 
                 }else if($(this).find('.text').hasClass('right')){
 
@@ -110,14 +112,6 @@ $(document).ready(function(){
         $('#news .news_box').stop().animate({'top': '0'},300);
     });
 
-    $('#faq .f_cate').click(function(){
-        $('#faq .f_cate').removeClass('on');
-        $(this).addClass('on');
-
-        $('#faq .tab').removeClass('on');
-        $('#faq .tab').eq($(this).index()).addClass('on');
-    });
-
     $('#faq .list .l_bot').slideUp(0);
 
     $('#faq .list .l_top').each(function(data,index){
@@ -138,6 +132,20 @@ $(document).ready(function(){
         }
     });
 
+    $('#faq .f_cate').click(function(){
+        $('#faq .f_cate').removeClass('on');
+        $(this).addClass('on');
+
+        $('#faq .tab').removeClass('on');
+        $('#faq .tab').eq($(this).index()).addClass('on');
+
+        //초기화
+        $('#faq .list .l_top').data('willOpen', true);
+        $('#faq .list .l_bot').slideUp(300);
+        $('#faq .list .l_top .arrow img').removeClass('on');
+
+    });
+
 
     $('#chat').change(function(){
         if($(this).is(":checked")){
@@ -154,8 +162,6 @@ $(document).ready(function(){
 
     var winW = $(window).innerWidth();
 
-    var mobW = $('.mob_nav .white_bg').innerWidth();
-
     if(winW <= 768) {
         $('.mob_nav').removeClass('on');
 
@@ -171,18 +177,6 @@ $(document).ready(function(){
         }else{
             $('.mob_nav').addClass('on');
         }
-    });
-
-    $('.mob_nav .white_bg').css({'left': -mobW + 'px'});
-
-    $('.ham_btn').click(function(){
-        $('.mob_nav').addClass('on');
-        $('.mob_nav .white_bg').stop().animate({'left': '0'}, 300);
-    });
-
-    $('.mob_nav .black_bg, .mob_nav .close_btn').click(function(){
-        $('.mob_nav').removeClass('on');
-        $('.mob_nav .white_bg').css({'left': -mobW + 'px'});
     });
 
 
@@ -384,6 +378,10 @@ $(document).ready(function(){
         }
     });
 
+    $('#join #user_id').change(function(){
+        $(this).siblings('.sub').addClass('on');
+    });
+
 
     $('#login .btns').click(function(){
         if($(this).hasClass('login')){
@@ -466,6 +464,19 @@ $(document).ready(function(){
         $('#play_detail .tab').eq($(this).index()).addClass('on');
     });
 
+    $('#play_detail .rp_wrap .btns').click(function(){
+        if($(this).hasClass('edit')){
+            var reple = $(this).parent().siblings().children('p').text();
+
+            $('#play_detail #reple_write').val(reple);
+
+        }else if($(this).hasClass('del')){
+            if(confirm("댓글을 삭제하시겠습니까?")) {
+                location.href='play.html';
+            }
+        }
+    });
+
 
     $('#mypage .f_li').click(function(){
         $('#mypage .f_li').removeClass('on');
@@ -487,6 +498,165 @@ $(document).ready(function(){
     });
 
 
+    $('#restaurant_sub .menu_li .img_area').click(function(){
+        var src = $(this).find('img').attr('src');
+
+        $('#img_view').fadeIn(300);
+        $('#img_view #preview').attr('src', src);
+    });
+
+
+    $('#chat .chatbox img').click(function(){
+        var src = $(this).attr('src');
+
+        $('#img_view').fadeIn(300);
+        $('#img_view #preview').attr('src', src);
+    });
+
+    $('#chat .send_btn').click(function(){
+        var chat = $('#newchat').val();
+
+        if(!chat){
+            alert("채팅 내용을 입력해주세요.");
+
+        }else{
+            var chatbox = '';
+
+            chatbox += '<div class="chatbox my">';
+            chatbox += '<div class="text vt_top">';
+            chatbox += '<p>' + chat + '</p>';
+            chatbox += '</div>';
+            chatbox += '</div>';
+
+            $('#chat .scroll_area').append(chatbox);
+
+            $('#newchat').val('');
+        }
+
+    });
+
+    $('.go_chat').click(function(){
+        if(winW < 960) {
+            location.href='chat.html';
+        }else{
+            location.href='chat_mob.html';
+        }
+    });
+
+    $(window).resize(function(){
+        var winW_re = $(window).innerWidth();
+
+        $('.go_chat').click(function(){
+            if(winW_re < 960) {
+                location.href='chat.html';
+            }else{
+                location.href='chat_mob.html';
+            }
+        });
+    });
+
+
+    $('#infochange #user_nick').change(function(){
+        $(this).siblings('.sub').addClass('on');
+    });
+
+
+    $('#chat_mob .ch_block').click(function(){
+        location.href='chat.html';
+    });
+
+    $('#infochange .f_btns').click(function(){
+        if($(this).hasClass('btn1')){
+            history.go(-1);
+
+        }else if($(this).hasClass('btn2')){
+            var nick = $('#infochange #user_nick').val();
+            var id = $('#infochange #user_id').val();
+            var pw = $('#infochange #user_pw').val();
+            var pw2 = $('#infochange #user_pw2').val();
+            var name = $('#infochange #user_name').val();
+            var phone = $('#infochange #user_phone').val();
+
+            if(!nick) {
+                alert("닉네임을 입력해주세요.");
+                return;
+            }
+            if(!id) {
+                alert("아이디를 입력해주세요.");
+                return;
+            }
+            if(!pw) {
+                alert("비밀번호를 입력해주세요.");
+                return;
+            }
+            if(!pw2) {
+                alert("비밀번호를 다시 한번 입력해주세요.");
+                return;
+            }
+            if(pw != pw2) {
+                alert("비밀번호가 일치하지 않습니다.");
+                return;
+            }
+            if(!name) {
+                alert("이름을 입력해주세요.");
+                return;
+            }
+            if(!phone) {
+                alert("연락처를 입력해주세요.");
+                return;
+            }
+
+            location.href='mypage.html';
+        }
+    });
+
+
+    $('#mypage .q_table .td').click(function(){
+        if($(this).parent().hasClass('ans')){
+            location.href='mypage_inquiry_sub.html';
+
+        }else{
+            location.href='mypage_inquiry_sub2.html';
+        }
+    });
+
+
+    $('#my_restaurant .more_btn').click(function(){
+        location.href='mypage_food.html';
+    });
+    $('#my_restaurant .btn1').click(function(){
+        location.href='restaurant_sub.html';
+    });
+    $('#my_restaurant .btn2').click(function(){
+        location.href='mypage_food_write.html';
+    });
+
+
+    $('#my_play .more_btn').click(function(){
+        location.href='mypage_play.html';
+    });
+    $('#my_play .btn1').click(function(){
+        location.href='play.html';
+    });
+    $('#my_play .btn2').click(function(){
+        location.href='mypage_play_write.html';
+    });
+
+
+    $('#my_estate .more_btn').click(function(){
+        location.href='mypage_estate.html';
+    });
+    $('#my_estate .btn1').click(function(){
+        location.href='estate_sub.html';
+    });
+    $('#my_estate .btn2').click(function(){
+        location.href='mypage_estate_write.html';
+    });
+
+
+    $('#my_inquiry .more_btn').click(function(){
+        location.href='mypage_inquiry.html';
+    });
 
 });
 
@@ -507,6 +677,9 @@ function read_myimg(input) {
         document.getElementById('thumb').src = e.target.result;
 
         $('#thumb').removeClass('empty');
+
+        $('.no_txt').removeClass('on');
+        $('.img').addClass('on');
         };
         reader.readAsDataURL(input.files[0]);
     }
@@ -520,6 +693,30 @@ function read_menu(input) {
 
         $('#thumb1').addClass('on');
         $('.no_txt').removeClass('on')
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+function read_newimg(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            var chatbox = '';
+
+            chatbox += '<div class="chatbox my">';
+            chatbox += '<div class="text vt_top">';
+            chatbox += '<img src="' + e.target.result + '">';
+            chatbox += '</div>';
+            chatbox += '</div>';
+
+            $('#chat .scroll_area').append(chatbox);
+
+            $('#chat .chatbox img').click(function(){
+                var src = $(this).attr('src');
+        
+                $('#img_view').fadeIn(300);
+                $('#img_view #preview').attr('src', src);
+            });
         };
         reader.readAsDataURL(input.files[0]);
     }

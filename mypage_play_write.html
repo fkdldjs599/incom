@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="" property='og:title' />
-    <meta content="" property='og:url' />
-    <meta content="" property='og:description' />
-    <meta content="" property='og:image' />
-    <title>Title</title>
+
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <meta content="WELCOME TO INCOM" property='og:title' />
+    <!-- <meta content="" property='og:url' /> -->
+    <meta content="환영합니다!" property='og:description' />
+    <!-- <meta content="" property='og:image' /> -->
+    <title>INCOM</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -56,7 +60,7 @@
                             </nav>
                         </div>
 
-                        <div class="mem_area vt_mid">
+                        <div class="mem_area vt_mid" onclick="location.href='mypage.html'">
                             <a href="login.html" class="mem_a">로그인</a>
                             <a href="join.html" class="mem_a">회원가입</a>
                         </div>
@@ -75,12 +79,73 @@
 
             <article class="form_disp">
                 <div class="f_block">
-                    <label class="f_lab">대표 이미지</label>
+                    <label class="f_lab">이미지</label>
                     <div class="i_wrap">
-                        <div class="img_wrap">
-                            <input type="file" name="" id="" class="file">
-                            <label for="" class="p_lab"></label>
+                        <div class="mymenu_wrap">
+                            <div class="menu vt_top">
+                                <input type="file" name="img1" id="img1" class="file menu_th" onchange="read_img1(this)">
+                                <label for="img1" class="img_area">
+                                    <div class="grid">
+                                        <span class="no_txt on">NO IMG</span>
+                                        <img src="" alt="img" id="thumb1">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="menu vt_top">
+                                <input type="file" name="img2" id="img2" class="file menu_th" onchange="read_img2(this)">
+                                <label for="img2" class="img_area">
+                                    <div class="grid">
+                                        <span class="no_txt on">NO IMG</span>
+                                        <img src="" alt="img" id="thumb2">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="menu vt_top">
+                                <input type="file" name="img3" id="img3" class="file menu_th" onchange="read_img3(this)">
+                                <label for="img3" class="img_area">
+                                    <div class="grid">
+                                        <span class="no_txt on">NO IMG</span>
+                                        <img src="" alt="img" id="thumb3">
+                                    </div>
+                                </label>
+                            </div>
                         </div>
+
+<script>
+    function read_img1(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+            document.getElementById('thumb1').src = e.target.result;
+            };
+            $('.no_txt').removeClass('on');
+            $('#thumb1').addClass('on');
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    function read_img2(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+            document.getElementById('thumb2').src = e.target.result;
+            };
+            $('.no_txt').removeClass('on');
+            $('#thumb2').addClass('on');
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    function read_img3(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+            document.getElementById('thumb3').src = e.target.result;
+            };
+            $('.no_txt').removeClass('on');
+            $('#thumb3').addClass('on');
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
                     </div>
                 </div>
 
@@ -101,21 +166,21 @@
                 <div class="f_block">
                     <label for="location" class="f_lab">위치</label>
                     <div class="i_wrap">
-                        <input type="text" name="location" id="location" placeholder="제목을 입력해주세요." class="input">
+                        <input type="text" name="location" id="location" placeholder="위치를 입력해주세요." class="input">
                     </div>
                 </div>
 
                 <div class="f_block">
                     <label for="parking" class="f_lab">주차시설</label>
                     <div class="i_wrap">
-                        <input type="text" name="parking" id="parking" placeholder="제목을 입력해주세요." class="input">
+                        <input type="text" name="parking" id="parking" placeholder="주차시설을 입력해주세요." class="input">
                     </div>
                 </div>
 
                 <div class="f_block">
                     <label for="traffic" class="f_lab">교통편</label>
                     <div class="i_wrap">
-                        <input type="text" name="traffic" id="traffic" placeholder="제목을 입력해주세요." class="input">
+                        <input type="text" name="traffic" id="traffic" placeholder="교통편을 입력해주세요." class="input">
                     </div>
                 </div>
             </article>
@@ -130,9 +195,11 @@
     </section>
 
     <footer class="footer">
-        <div class="inner">
+        <div class="main_inner">
             <div class="logo_area vt_top">
-                <a href="index.html" class="logo"></a>
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="INCOM">
+                </a>
             </div>
             <div class="info_area vt_top">
                 <div class="info_line">

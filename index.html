@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="" property='og:title' />
-    <meta content="" property='og:url' />
-    <meta content="" property='og:description' />
-    <meta content="" property='og:image' />
-    <title>Title</title>
+
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <meta content="WELCOME TO INCOM" property='og:title' />
+    <!-- <meta content="" property='og:url' /> -->
+    <meta content="환영합니다!" property='og:description' />
+    <!-- <meta content="" property='og:image' /> -->
+    <title>INCOM</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -24,14 +28,15 @@
     .header .nav_area .nav_a {color: #fff;}
     .header .mem_area .mem_a {color: #fff;}
     @media (max-width: 768px) {
-        .header .nav_area .nav_a {color: #191919;}   
+        .header .nav_area .nav_a {color: #191919;}
+        .header.fixed .mem_area .mem_a {color: #fff;}
     }
 
     .header.fixed {background: #fff;}
     .header.fixed .nav_area .nav_a {color: #191919;}
+    .header.fixed .nav_area .nav_a:hover {color: #1BC6AF;}
     .header.fixed .mem_area .mem_a {color: #191919;}
-
-    .footer.fixed {position: inherit;}
+    .header.fixed .mem_area .mem_a:hover {color: #1BC6AF;}
 </style>
 
 <body>
@@ -67,7 +72,7 @@
                                 <a href="play.html" class="nav_a">놀거리</a>
                                 <a href="estate.html" class="nav_a">부동산</a>
                                 <a href="news.html" class="nav_a">뉴스</a>
-                                <a href="mypage.html" class="nav_a">마이페이지</a>
+                                <a href="faq.html" class="nav_a">FAQ</a>
                             </nav>
                         </div>
 
@@ -125,9 +130,15 @@
                     </div>
 
                     <div class="ani_wrap">
-                        <i class="line"></i>
-                        <div class="rotate"></div>
-                    </i>
+                        <i class="line line1"></i>
+                        <i class="line line2"></i>
+
+                        <div class="infinite">
+                            <div class="circle">
+                                <div class="circle2"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
 
