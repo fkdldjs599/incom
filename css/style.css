@@ -694,7 +694,7 @@ input.input {height: 40px; border-radius: 10px; border: 1px solid #D4D4D4; box-s
 
 .f_tab .list_wrap {margin-bottom: 60px;}
 .f_tab .list_wrap .list {width: 100%; border-top: 2px solid #1BC6AF; border-bottom: 1px solid #D2D2D2;}
-.f_tab .list_wrap .list .l_top {display: flex; align-items: center; padding: 5px 0; box-sizing: border-box;}
+.f_tab .list_wrap .list .l_top {display: flex; align-items: center; padding: 5px 0; box-sizing: border-box; cursor: pointer;}
 .f_tab .list_wrap .list .l_top .cate {width: 150px; font-size: 18px; color: #1BC6AF; font-weight: 600; text-align: center;}
 .f_tab .list_wrap .list .l_top .title {width: calc(100% - 230px); font-size: 18px; font-weight: 500; padding-left: 10px; box-sizing: border-box;}
 .f_tab .list_wrap .list .l_top .arrow {width: 80px;}
@@ -734,6 +734,19 @@ input.input {height: 40px; border-radius: 10px; border: 1px solid #D4D4D4; box-s
 #inquiry .btn_area {text-align: center;}
 .submit_btn {width: 200px; height: 60px; background: #1BC6AF; color: #fff; font-size: 20px; font-weight: bold;}
 
+@media (max-width: 1200px) {
+    .form_flex {margin-bottom: 80px;}
+    .form_flex .f_block .i_wrap .textarea {height: 400px;}
+}
+
+@media (max-width: 768px) {
+    .form_flex {margin-bottom: 50px;}
+    .form_flex .f_block {flex-direction: column;}
+    .form_flex .f_block .f_lab {width: 100%; display: block; margin: 0 0 15px; font-size: 18px;}
+    .form_flex .f_block .i_wrap {width: 100%; display: block;}
+    .form_flex .f_block .i_wrap .textarea {height: 200px;}
+}
+
 
 /* 마이페이지 */
 #mypage {padding-top: 50px; box-sizing: border-box;}
@@ -746,7 +759,7 @@ input.input {height: 40px; border-radius: 10px; border: 1px solid #D4D4D4; box-s
 
 .my_right {width: calc(100% - 250px); padding-left: 50px; box-sizing: border-box;}
 .my_right .title_area {margin-bottom: 50px; padding-bottom: 20px; border-bottom: 1px solid black;}
-.my_right .title_area .my_h1 {font-size: 40px; box-sizing: border-box; font-weight: bold; display: inline-block; vertical-align: middle; width: calc(100% - 250px);}
+.my_right .title_area .my_h1 {font-size: 40px; box-sizing: border-box; font-weight: bold; display: inline-block; vertical-align: middle; width: calc(100% - 330px);}
 .my_right .title_area .my_h1 .arrow {width: 25px; display: inline-block; transform: rotate(90deg); transition: 300ms; display: none;}
 .my_right .title_area .my_h1 .arrow img {width: 100%;}
 
@@ -792,7 +805,7 @@ input.input {height: 40px; border-radius: 10px; border: 1px solid #D4D4D4; box-s
 .my_right .my_contents .q_table .td2 {white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
 .my_right .my_contents .q_table .ans .td4 {color: #1BC6AF; font-weight: 500;}
 
-.my_right .f_ul {display: inline-block; vertical-align: middle; width: 250px; text-align: right;}
+.my_right .f_ul {display: inline-block; vertical-align: middle; width: 330px; text-align: right;}
 .my_right .f_ul .f_li {font-size: 18px; padding: 5px 15px; box-sizing: border-box; cursor: pointer;}
 .my_right .f_ul .f_li.on {color: #1BC6AF; font-weight: 500;}
 
@@ -805,6 +818,7 @@ input.input {height: 40px; border-radius: 10px; border: 1px solid #D4D4D4; box-s
     #mypage .inner {position: relative;}
 
     .my_left {width: 100%; position: absolute; top: 2%; left: 50%; transform: translateX(-50%); width: calc(100% - 30px); z-index: 6; background: #fff;}
+    .my_left.top4 {top: 4%;}
     .inquiry .my_left {top: 7%;}
     .my_ul {border-radius: 0 0 10px 10px;}
     .my_ul .my_li .my_a {text-align: center;}
@@ -1127,7 +1141,7 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
 .page .contents .ch_left .ch_block .right .bot {font-size: 14px; color: #707070; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
 
 .page .contents .ch_right {width: calc(100% - 250px); position: relative; height: 100%;}
-.page .contents .ch_right .top_area {padding: 15px; box-sizing: border-box; border-bottom: 1px solid #ddd;}
+.page .contents .ch_right .top_area {padding: 15px; box-sizing: border-box; border-bottom: 1px solid #ddd; background: #fff; position: relative; z-index: 5;}
 .page .contents .ch_right .top_area .profile {width: 40px; height: 40px; border-radius: 50%; overflow: hidden; border: 1px solid #ddd; box-sizing: border-box;}
 .page .contents .ch_right .top_area .profile img {width: 40px; height: 40px; object-fit: cover;}
 .page .contents .ch_right .top_area .nick {width: calc(100% - 40px); padding-left: 15px; box-sizing: border-box;}
@@ -1135,7 +1149,7 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
 
 .page .contents .ch_right .chat_area {width: 100%; height: 100%; overflow-y: scroll; -ms-overflow-style: none; scrollbar-width: none;}
 .page .contents .ch_right .chat_area::-webkit-scrollbar {display: none;}
-.page .contents .ch_right .chat_area .scroll_area {padding: 15px 30px 165px; box-sizing: border-box;}
+.page .contents .ch_right .chat_area .scroll_area {padding: 15px 30px 220px; box-sizing: border-box; width: 100%;}
 .page .contents .ch_right .chat_area .chatbox {margin-bottom: 20px;}
 .page .contents .ch_right .chat_area .chatbox:last-child {margin: 0;}
 .page .contents .ch_right .chat_area .chatbox .profile {width: 30px; height: 30px; border-radius: 50%; overflow: hidden; margin-right: 15px;}
@@ -1189,7 +1203,7 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
     .page .contents .ch_right .top_area .nick p {font-size: 16px;}
     .page .contents .ch_right .top_area .nick {}
 
-    .page .contents .ch_right .chat_area .scroll_area {padding: 70px 15px;}
+    .page .contents .ch_right .chat_area .scroll_area {padding: 70px 15px 85px;}
     .page .contents .ch_right .chat_area .chatbox .text {max-width: 90%;}
     .page .contents .ch_right .chat_area .chatbox.date {font-size: 16px; margin: 20px 0 30px;}
     .page .contents .ch_right .chat_area .chatbox .profile {display: none;}
@@ -1206,6 +1220,7 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
     .page .contents .ch_left .ch_block .right {width: calc(100% - 40px); padding-left: 5px;}
     .page .contents .ch_left .ch_block .right .top {margin-bottom: 5px; font-size: 15px;}
     .page .contents .ch_left .ch_block .right .bot {font-size: 12px;}
+    .page .contents .ch_right .chat_area .chatbox p {font-size: 14px;}
 }
 
 
@@ -1226,4 +1241,7 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
 .page .white_box .f_tab .ft_block .nick_area .sub.on {display: block;}
 
 
-
+#term {padding-top: 30px; box-sizing: border-box;}
+#term .t_title {font-size: 30px; font-weight: bold; margin-bottom: 30px; text-align: center;}
+#term .term_box {width: 100%;}
+#term .term_box p {font-size: 16px; padding: 20px 15px; box-sizing: border-box; background: #EBEBEB;}

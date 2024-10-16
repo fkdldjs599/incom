@@ -485,7 +485,11 @@ $(document).ready(function(){
         $('.my_contents .box_wrap .box').removeClass('on');
 
         if($(this).index() == '0') {
+            $('.my_contents .box_wrap .box').addClass('on');
+
+        }else if($(this).index() == '1') {
             $('.my_contents .box_wrap .my_upload').addClass('on');
+
         }else {
             $('.my_contents .box_wrap .my_book').addClass('on');
         }
@@ -531,12 +535,16 @@ $(document).ready(function(){
             $('#chat .scroll_area').append(chatbox);
 
             $('#newchat').val('');
-        }
 
+            //입력하면 밑으로
+            var scr = $('#chat .scroll_area').prop('scrollHeight');
+            $('#chat .chat_area').scrollTop(scr)
+            
+        }
     });
 
     $('.go_chat').click(function(){
-        if(winW < 960) {
+        if(winW > 960) {
             location.href='chat.html';
         }else{
             location.href='chat_mob.html';
