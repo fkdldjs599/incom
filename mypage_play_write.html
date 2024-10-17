@@ -86,7 +86,7 @@
                                 <input type="file" name="img1" id="img1" class="file menu_th" onchange="read_img1(this)">
                                 <label for="img1" class="img_area">
                                     <div class="grid">
-                                        <span class="no_txt on">NO IMG</span>
+                                        <img src="img/img_empty.png" alt="img" id="empty1" class="empty on">
                                         <img src="" alt="img" id="thumb1">
                                     </div>
                                 </label>
@@ -95,7 +95,7 @@
                                 <input type="file" name="img2" id="img2" class="file menu_th" onchange="read_img2(this)">
                                 <label for="img2" class="img_area">
                                     <div class="grid">
-                                        <span class="no_txt on">NO IMG</span>
+                                        <img src="img/img_empty.png" alt="img" id="empty2" class="empty on">
                                         <img src="" alt="img" id="thumb2">
                                     </div>
                                 </label>
@@ -104,7 +104,7 @@
                                 <input type="file" name="img3" id="img3" class="file menu_th" onchange="read_img3(this)">
                                 <label for="img3" class="img_area">
                                     <div class="grid">
-                                        <span class="no_txt on">NO IMG</span>
+                                        <img src="img/img_empty.png" alt="img" id="empty3" class="empty on">
                                         <img src="" alt="img" id="thumb3">
                                     </div>
                                 </label>
@@ -118,7 +118,7 @@
             reader.onload = function(e) {
             document.getElementById('thumb1').src = e.target.result;
             };
-            $('.no_txt').removeClass('on');
+            $('#empty1').removeClass('on');
             $('#thumb1').addClass('on');
             reader.readAsDataURL(input.files[0]);
         }
@@ -129,7 +129,7 @@
             reader.onload = function(e) {
             document.getElementById('thumb2').src = e.target.result;
             };
-            $('.no_txt').removeClass('on');
+            $('#empty2').removeClass('on');
             $('#thumb2').addClass('on');
             reader.readAsDataURL(input.files[0]);
         }
@@ -140,7 +140,7 @@
             reader.onload = function(e) {
             document.getElementById('thumb3').src = e.target.result;
             };
-            $('.no_txt').removeClass('on');
+            $('#empty3').removeClass('on');
             $('#thumb3').addClass('on');
             reader.readAsDataURL(input.files[0]);
         }

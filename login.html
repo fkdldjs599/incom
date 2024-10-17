@@ -81,11 +81,20 @@
                         <div class="l_block_wrap">
                             <div class="l_block">
                                 <label for="user_id" class="l_lab">아이디</label>
-                                <input type="text" name="user_id" id="user_id" class="input">
+                                <div class="i_wrap">
+                                    <input type="text" name="user_id" id="user_id" class="input">
+                                </div>
                             </div>
                             <div class="l_block">
                                 <label for="user_pw" class="l_lab">비밀번호</label>
-                                <input type="text" name="user_pw" id="user_pw" class="input">
+                                <div class="i_wrap">
+                                    <input type="password" name="user_pw" id="user_pw" class="input">
+
+                                    <button type="button" class="btn_area showhide">
+                                        <img src="img/pw_show.png" alt="비밀번호 보기" id="show" class="on">
+                                        <img src="img/pw_hide.png" alt="비밀번호 숨김" id="hide">
+                                    </button>
+                                </div>
                             </div>
                             <div class="l_block">
                                 <input type="checkbox" name="auto_login" id="auto_login" class="ckbox">

@@ -27,7 +27,7 @@ input.input {height: 40px; border-radius: 10px; border: 1px solid #D4D4D4; box-s
 @media (max-width: 1230px) {
     .inner {width: 100%; padding: 0 15px; box-sizing: border-box;}
 }
-@media (max-width: 630px) {
+@media (max-width: 860px) {
     .inner600 {width: 100%;}
 }
 
@@ -904,8 +904,7 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
 .form_disp .f_block .mymenu_wrap .menu .img_area {width: 100%; height: 232px; overflow: hidden; border-radius: 10px; background: #EEEEEE; margin-bottom: 10px; display: block;}
 .form_disp .f_block .mymenu_wrap .menu .img_area img {width: 232px; height: 232px; object-fit: cover; display: none;}
 .form_disp .f_block .mymenu_wrap .menu .img_area img.on {display: block;}
-.form_disp .f_block .mymenu_wrap .menu .img_area .no_txt {font-size: 20px; color: #707070; font-weight: bold; display: none;}
-.form_disp .f_block .mymenu_wrap .menu .img_area .no_txt.on {display: block;}
+.form_disp .f_block .mymenu_wrap .menu .img_area img.empty {width: 120px; height: auto; object-fit: inherit;}
 .form_disp .f_block .mymenu_wrap .menu .txt_area .input {height: 50px;}
 .form_disp .f_block .mymenu_wrap .menu .del_btn {position: absolute; right: 10px; top: 10px; width: 30px;}
 
@@ -995,6 +994,7 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
 
     .form_disp {margin-bottom: 50px;}
 
+    .form_disp .f_block .mymenu_wrap .menu {min-height: auto;}
     .form_disp .f_block .mymenu_wrap .menu .img_area img {width: 470px;}
 
     .form_disp .f_block .sb_block .sb_half {width: 100%; margin-bottom: 10px;}
@@ -1045,9 +1045,12 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
 .page .white_box .ft_block .input_con .line {margin-bottom: 15px; display: flex; align-items: start;}
 .page .white_box .ft_block .input_con .line:last-child {margin-bottom: 0;}
 .page .white_box .ft_block .input_con .line .ft_lab {width: 200px; font-size: 20px; font-weight: 600; display: inline-block; padding-top: 13px; box-sizing: border-box;}
-.page .white_box .ft_block .input_con .line .i_wrap {width: calc(100% - 200px);}
-.page .white_box .ft_block .input_con .line .i_wrap .input {width: 100%; height: 50px; margin-bottom: 10px;}
+.page .white_box .ft_block .input_con .line .i_wrap {width: calc(100% - 200px); position: relative;}
+.page .white_box .ft_block .input_con .line .i_wrap .input {width: 100%; height: 50px;}
 .page .white_box .ft_block .input_con .line .i_wrap .input:last-child {margin-bottom: 0;}
+.page .white_box .ft_block .input_con .line .i_wrap .btn_area {width: 40px; right: 10px; top: 50%; transform: translateY(-50%); position: absolute;}
+.page .white_box .ft_block .input_con .line .i_wrap .btn_area img {display: none;}
+.page .white_box .ft_block .input_con .line .i_wrap .btn_area img.on {display: block;}
 .page .white_box .ft_block .input_con .line .i_wrap .r_wrap {padding-top: 10px; box-sizing: border-box;}
 .page .white_box .ft_block .input_con .line .i_wrap .r_box {margin-right: 40px; display: inline-block; vertical-align: middle;}
 .page .white_box .ft_block .input_con .line .i_wrap .r_box:last-child {margin-right: 0;}
@@ -1098,7 +1101,8 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
     .page .white_box .ft_block {margin-bottom: 50px;}
     .page .white_box .ft_block .j_h2 {font-size: 20px; margin-bottom: 20px;}
     .page .white_box .ft_block .input_con .line .ft_lab {font-size: 16px;}
-    .page .white_box .ft_block .input_con .line .i_wrap .input {height: 40px;}
+    .page .white_box .ft_block .input_con .line .i_wrap .input {height: 35px;}
+    .page .white_box .ft_block .input_con .line .i_wrap .btn_area {width: 30px;}
     .page .white_box .ft_block .input_con .line .i_wrap .r_box {margin-right: 20px;}
     .page .white_box .ft_block .input_con .line .i_wrap .r_box .ac_lab {font-size: 14px;}
 }
@@ -1111,6 +1115,10 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
 .page .l_block_wrap .l_block .l_lab {display: block; font-size: 20px; font-weight: 600; margin-bottom: 10px;}
 .page .l_block_wrap .l_block .input {width: 100%; height: 50px;}
 .page .l_block_wrap .l_block .auto {font-size: 18px; font-weight: 600; padding-left: 10px; box-sizing: border-box;}
+.page .l_block_wrap .l_block .i_wrap {position: relative;}
+.page .l_block_wrap .l_block .btn_area {position: absolute; width: 40px; right: 10px; top: 50%; transform: translateY(-50%);}
+.page .l_block_wrap .l_block .btn_area img {display: none;}
+.page .l_block_wrap .l_block .btn_area img.on {display: block;}
 .page .l_btn_area .btns {width: 100%; height: 60px; display: block; margin-bottom: 10px; font-size: 20px; font-weight: bold; border: 1px solid #1BC6AF; color: #1BC6AF;}
 .page .l_btn_area .btns.login {background: #1BC6AF; color: #fff;}
 

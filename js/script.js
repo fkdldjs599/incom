@@ -666,6 +666,30 @@ $(document).ready(function(){
         location.href='mypage_inquiry.html';
     });
 
+
+    $('.showhide').each(function(data,index){
+        $('.showhide').data("willshow", true);
+    });
+
+    $('.showhide').click(function(){
+        if($(this).data("willshow")){
+            $(this).data("willshow", false);
+            $(this).children("#show").removeClass("on");
+            $(this).children("#hide").addClass("on");
+            $(this).prev(".input").attr("type", "text");
+
+        }else {
+            $(this).data("willshow", true);
+            $(this).children("#show").addClass("on");
+            $(this).children("#hide").removeClass("on");
+            $(this).prev(".input").attr("type", "password");
+        }
+    });
+
+    $('input[type="date"]').change(function(){
+        $(this).addClass('show');
+    });
+
 });
 
 
