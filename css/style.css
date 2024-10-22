@@ -1047,7 +1047,7 @@ input[type='time']::-webkit-calendar-picker-indicator {position: absolute; left:
 .page .white_box .ft_block .input_con .line .ft_lab {width: 200px; font-size: 20px; font-weight: 600; display: inline-block; padding-top: 13px; box-sizing: border-box;}
 .page .white_box .ft_block .input_con .line .i_wrap {width: calc(100% - 200px); position: relative;}
 .page .white_box .ft_block .input_con .line .i_wrap .input {width: 100%; height: 50px;}
-.page .white_box .ft_block .input_con .line .i_wrap .input:last-child {margin-bottom: 0;}
+.page .white_box .ft_block .input_con .line .i_wrap .input.gap {margin-top: 10px;}
 .page .white_box .ft_block .input_con .line .i_wrap .btn_area {width: 40px; right: 10px; top: 50%; transform: translateY(-50%); position: absolute;}
 .page .white_box .ft_block .input_con .line .i_wrap .btn_area img {display: none;}
 .page .white_box .ft_block .input_con .line .i_wrap .btn_area img.on {display: block;}

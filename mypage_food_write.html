@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="" property='og:title' />
-    <meta content="" property='og:url' />
-    <meta content="" property='og:description' />
-    <meta content="" property='og:image' />
+    <meta content="WELCOME TO INCOM" property='og:title' />
+    <!-- <meta content="" property='og:url' /> -->
+    <meta content="환영합니다!" property='og:description' />
+    <meta content="img/ban7.jpg" property='og:image' />
     <title>Title</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/reset.css">
@@ -96,17 +96,17 @@
 
                 <div class="f_block">
                     <label class="f_lab">
-                        메뉴
+                        메뉴 (최대 12개)
 
                         <button type="button" class="add_btn">메뉴 추가하기</button>
                     </label>
                     <div class="i_wrap">
                         <div class="mymenu_wrap">
                             <div class="menu vt_top">
-                                <input type="file" name="menu1" id="menu1" class="file menu_th" onchange="read_menu(this)">
+                                <input type="file" name="menu1" id="menu1" class="file menu_th" onchange="read_menu1(this)">
                                 <label for="menu1" class="img_area">
                                     <div class="grid">
-                                        <span class="no_txt t1 on">NO IMG</span>
+                                        <img src="img/img_empty.png" alt="img" id="empty1" class="empty on">
                                         <img src="" alt="img" id="thumb1">
                                     </div>
                                 </label>
@@ -114,9 +114,9 @@
                                     <input type="text" name="name1" id="name1" class="input" placeholder="메뉴 이름">
                                 </div>
 
-                                <button type="button" class="del_btn">
+                                <!-- <button type="button" class="del_btn">
                                     <img src="img/delete.png" alt="삭제">
-                                </button>
+                                </button> -->
                             </div>
                         </div>
                     </div>
@@ -301,12 +301,12 @@
             </div>
             <div class="info_area vt_top">
                 <div class="info_line">
-                    <div class="i_wrap vt_mid">푸터 : 정보</div>
-                    <div class="i_wrap vt_mid">푸터 : 정보</div>
-                    <div class="i_wrap vt_mid">푸터 : 정보</div>
+                    <div class="i_wrap vt_mid">상호명 : INCOM</div>
+                    <div class="i_wrap vt_mid">주소 : 인천시 남동구 구월동</div>
+                    <div class="i_wrap vt_mid">대표자 : 김대표</div>
                 </div>
                 <div class="info_line">
-                    <div class="i_wrap">푸터 : 정보</div>
+                    <div class="i_wrap">사업자등록번호 : 123-45-67899</div>
                 </div>
             </div>
             <div class="term_area vt_top">
@@ -317,3 +317,177 @@
     </footer>
 </body>
 </html>
+
+
+<script>
+
+function read_menu1(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    document.getElementById('thumb1').src = e.target.result;
+
+    $('#thumb1').addClass('on');
+    $('#empty1.empty').removeClass('on');
+    };
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+function read_menu2(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    document.getElementById('thumb2').src = e.target.result;
+
+    $('#thumb2').addClass('on');
+    $('#empty2.empty').removeClass('on');
+    };
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+function read_menu3(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    document.getElementById('thumb3').src = e.target.result;
+
+    $('#thumb3').addClass('on');
+    $('#empty3.empty').removeClass('on');
+    };
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+function read_menu4(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    document.getElementById('thumb4').src = e.target.result;
+
+    $('#thumb4').addClass('on');
+    $('#empty4.empty').removeClass('on');
+    };
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+function read_menu5(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    document.getElementById('thumb5').src = e.target.result;
+
+    $('#thumb5').addClass('on');
+    $('#empty5.empty').removeClass('on');
+    };
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+function read_menu6(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    document.getElementById('thumb6').src = e.target.result;
+
+    $('#thumb6').addClass('on');
+    $('#empty6.empty').removeClass('on');
+    };
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+function read_menu7(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    document.getElementById('thumb7').src = e.target.result;
+
+    $('#thumb7').addClass('on');
+    $('#empty7.empty').removeClass('on');
+    };
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+function read_menu8(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    document.getElementById('thumb8').src = e.target.result;
+
+    $('#thumb8').addClass('on');
+    $('#empty8.empty').removeClass('on');
+    };
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+
+function read_menu9(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    document.getElementById('thumb9').src = e.target.result;
+
+    $('#thumb9').addClass('on');
+    $('#empty9.empty').removeClass('on');
+    };
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+function read_menu10(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    document.getElementById('thumb10').src = e.target.result;
+
+    $('#thumb10').addClass('on');
+    $('#empty10.empty').removeClass('on');
+    };
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+function read_menu11(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    document.getElementById('thumb11').src = e.target.result;
+
+    $('#thumb11').addClass('on');
+    $('#empty11.empty').removeClass('on');
+    };
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+function read_menu12(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    document.getElementById('thumb12').src = e.target.result;
+
+    $('#thumb12').addClass('on');
+    $('#empty12.empty').removeClass('on');
+    };
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+</script>

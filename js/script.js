@@ -227,48 +227,40 @@ $(document).ready(function(){
 
 
     $('#write_food .add_btn').click(function(){
-        var id = $('#write_food .menu:last-child .file').attr('id');
-        var number = /[^0-9]/g;
-        var number2 = id.replace(number, "");
-        var i = parseInt(number2)+parseInt(1);
+        var length = $('#write_food .mymenu_wrap .menu').length
+        var index = length + 1;
 
-        var data = '';
+        if(length < 12) {
+            var data = '';
 
-        data += '<div class="menu vt_top">'
-        data += '<input type="file" name="menu' + i + '" id="menu' + i + '" class="file menu_th" onchange="read_menu(this)">'
-        data += '<label for="menu' + i + '" class="img_area">'
-        data += '<div class="grid">'
-        data += '<span class="no_txt t' + i + ' on">NO IMG</span>'
-        data += '<img src="" alt="img" id="thumb' + i + '">'
-        data += '</div>'
-        data += '</label>'
-        data += '<div class="txt_area">'
-        data += '<input type="text" name="name' + i + '" id="name' + i + '" class="input" placeholder="메뉴 이름">'
-        data += '</div>'
-        data += '<button type="button" class="del_btn">'
-        data += '<img src="img/delete.png" alt="삭제">'
-        data += '</button>'
-        data += '</div>'
-
-        $('#write_food .mymenu_wrap').append(data);
-
-        $('#write_food .del_btn').click(function(){
-            if($('#write_food .menu').length > 1){
-                if(confirm("메뉴를 삭제하시겠습니까?")){
-                    $(this).parent('.menu').remove();
-                }
-            }
-        });
+            data += '<div class="menu vt_top">'
+            data += '<input type="file" name="menu' + index + '" id="menu' + index + '" class="file menu_th" onchange="read_menu' + index + '(this)">'
+            data += '<label for="menu' + index + '" class="img_area">'
+            data += '<div class="grid">'
+            data += '<img src="img/img_empty.png" alt="img" id="empty' + index + '" class="empty on">'
+            data += '<img src="" alt="img" id="thumb' + index + '">'
+            data += '</div>'
+            data += '</label>'
+            data += '<div class="txt_area">'
+            data += '<input type="text" name="name' + index + '" id="name' + index + '" class="input" placeholder="메뉴 이름">'
+            data += '</div>'
+            // data += '<button type="button" class="del_btn">'
+            // data += '<img src="img/delete.png" alt="삭제">'
+            // data += '</button>'
+            data += '</div>'
+    
+            $('#write_food .mymenu_wrap').append(data);
+        }
         
     });
 
-    $('#write_food .del_btn').click(function(){
-        if($('#write_food .menu').length > 1){
-            if(confirm("메뉴를 삭제하시겠습니까?")){
-                $(this).parent('.menu').remove();
-            }
-        }
-    });
+    // $('#write_food .del_btn').click(function(){
+    //     if($('#write_food .menu').length > 1){
+    //         if(confirm("메뉴를 삭제하시겠습니까?")){
+    //             $(this).parent('.menu').remove();
+    //         }
+    //     }
+    // });
 
 
     $('#write_food #location_1').change(function(){
@@ -712,19 +704,6 @@ function read_myimg(input) {
 
         $('.no_txt').removeClass('on');
         $('.img').addClass('on');
-        };
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-function read_menu(input) {
-
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function(e) {
-        document.getElementById('thumb1').src = e.target.result;
-
-        $('#thumb1').addClass('on');
-        $('.no_txt').removeClass('on')
         };
         reader.readAsDataURL(input.files[0]);
     }
