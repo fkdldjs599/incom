@@ -2,11 +2,11 @@ $(document).ready(function(){
     var winH = $(window).innerHeight();
     var docH = $('body').innerHeight();
     
-    if(docH < winH) {
-        $('.footer').addClass('fixed');
-    }else{
-        $('.footer').removeClass('fixed');
-    }
+    // if(docH < winH) {
+    //     $('.footer').addClass('fixed');
+    // }else{
+    //     $('.footer').removeClass('fixed');
+    // }
 
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
