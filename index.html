@@ -27,16 +27,17 @@
     .header {background: transparent; position: fixed;}
     .header .nav_area .nav_a {color: #fff;}
     .header .mem_area .mem_a {color: #fff;}
-    @media (max-width: 768px) {
-        .header .nav_area .nav_a {color: #191919;}
-        .header.fixed .mem_area .mem_a {color: #fff;}
-    }
 
     .header.fixed {background: #fff;}
     .header.fixed .nav_area .nav_a {color: #191919;}
     .header.fixed .nav_area .nav_a:hover {color: #1BC6AF;}
     .header.fixed .mem_area .mem_a {color: #191919;}
     .header.fixed .mem_area .mem_a:hover {color: #1BC6AF;}
+
+    @media (max-width: 768px) {
+        .header .nav_area .nav_a {color: #191919;}
+        .header.fixed .mem_area .mem_a {color: #fff;}
+    }
 </style>
 
 <body>
