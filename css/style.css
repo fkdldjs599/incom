@@ -751,7 +751,7 @@ input.input {height: 40px; border-radius: 10px; border: 1px solid #D4D4D4; box-s
 
 /* 마이페이지 */
 #mypage {padding-top: 50px; box-sizing: border-box;}
-.my_left {width: 250px;}
+.my_left {width: 250px; position: sticky; top: 150px;}
 .my_ul {width: 100%; border: 1px solid #D4D4D4; border-radius: 10px; box-sizing: border-box;}
 .my_ul .my_li {display: block;}
 .my_ul .my_li .my_a {display: block; font-size: 18px; padding: 20px; box-sizing: border-box; transition: 300ms;}
